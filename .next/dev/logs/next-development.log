@@ -1,0 +1,515 @@
+[00:00:03.230] Server  WARN     ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:00:03.818] Server  LOG      ✓ Ready in 2.9s
+[00:00:04.138] Server  LOG      Middleware Hit: "/"
+[00:00:04.147] Server  LOG      Cookie object: undefined
+[00:00:04.148] Server  LOG      Extracted token: undefined
+[00:00:04.150] Server  LOG      No token — redirecting to login
+[00:00:04.187] Server  LOG      Middleware Hit: "/auth/login"
+[00:00:04.188] Server  LOG     Public route → allowing: "/auth/login"
+[00:00:07.211] Server  LOG      ○ Compiling /auth/login ...
+[00:00:09.349] Server  LOG      Middleware Hit: "/auth/login"
+[00:00:09.350] Server  LOG     Public route → allowing: "/auth/login"
+[00:00:09.787] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:09.990] Server  LOG      Middleware Hit: "/icon.svg"
+[00:00:09.991] Server  LOG      Cookie object: undefined
+[00:00:09.992] Server  LOG      Extracted token: undefined
+[00:00:09.993] Server  LOG      No token — redirecting to login
+[00:00:10.018] Server  LOG      Middleware Hit: "/auth/login"
+[00:00:10.019] Server  LOG     Public route → allowing: "/auth/login"
+[00:00:10.140] Server  LOG      Middleware Hit: "/icon-dark-32x32.png"
+[00:00:10.141] Server  LOG      Cookie object: undefined
+[00:00:10.142] Server  LOG      Extracted token: undefined
+[00:00:10.142] Server  LOG      No token — redirecting to login
+[00:00:10.154] Server  LOG      Middleware Hit: "/auth/login"
+[00:00:10.155] Server  LOG     Public route → allowing: "/auth/login"
+[00:00:10.451] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:10.451] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/auth/login","route":"/auth/login"}
+[00:00:10.451] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/auth/login color: rgb(120, 120, 120) color: inherit {"dp":"/auth/login","o":"http://localhost:3000/auth/login","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763194511768}
+[00:00:10.456] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:10.518] Server  LOG      Middleware Hit: "/icon.svg"
+[00:00:10.518] Server  LOG      Cookie object: undefined
+[00:00:10.519] Server  LOG      Extracted token: undefined
+[00:00:10.520] Server  LOG      No token — redirecting to login
+[00:00:10.539] Server  LOG      Middleware Hit: "/auth/login"
+[00:00:10.540] Server  LOG     Public route → allowing: "/auth/login"
+[00:00:10.640] Server  LOG      Middleware Hit: "/icon-dark-32x32.png"
+[00:00:10.641] Server  LOG      Cookie object: undefined
+[00:00:10.642] Server  LOG      Extracted token: undefined
+[00:00:10.642] Server  LOG      No token — redirecting to login
+[00:00:10.652] Server  LOG      Middleware Hit: "/auth/login"
+[00:00:10.652] Server  LOG     Public route → allowing: "/auth/login"
+[00:00:10.720] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:10.720] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/auth/login","route":"/auth/login"}
+[00:00:10.720] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/auth/login color: rgb(120, 120, 120) color: inherit {"dp":"/auth/login","o":"http://localhost:3000/auth/login","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763194512437}
+[00:00:19.469] Server  LOG      Middleware Hit: "/api/auth/login"
+[00:00:19.470] Server  LOG     Public route → allowing: "/api/auth/login"
+[00:00:20.685] Server  LOG     prisma:info "Starting a postgresql pool with 13 connections."
+[00:00:21.787] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"name\", \"public\".\"User\".\"avatar\", \"public\".\"User\".\"phone\", \"public\".\"User\".\"location\", \"public\".\"User\".\"bio\", \"public\".\"User\".\"joinDate\", \"public\".\"User\".\"role\"::text, \"public\".\"User\".\"isVerified\", \"public\".\"User\".\"emailNotifications\", \"public\".\"User\".\"marketingEmails\", \"public\".\"User\".\"courseRecommendations\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"email\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[00:00:21.906] Browser ERROR   Login error: {"data":{"error":"Invalid email or password","success":false},"name":"ApiError","status":401}
+[00:00:23.871] Server  LOG      Middleware Hit: "/auth/signup"
+[00:00:23.872] Server  LOG     Public route → allowing: "/auth/signup"
+[00:00:24.742] Server  LOG      Middleware Hit: "/icon.svg"
+[00:00:24.743] Server  LOG      Cookie object: undefined
+[00:00:24.744] Server  LOG      Extracted token: undefined
+[00:00:24.745] Server  LOG      No token — redirecting to login
+[00:00:24.758] Server  LOG      Middleware Hit: "/auth/login"
+[00:00:24.759] Server  LOG     Public route → allowing: "/auth/login"
+[00:00:24.836] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/auth/signup color: rgb(120, 120, 120) color: inherit {"dp":"/auth/signup","o":"http://localhost:3000/auth/signup","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763194526554}
+[00:00:24.844] Server  LOG      Middleware Hit: "/icon-dark-32x32.png"
+[00:00:24.845] Server  LOG      Cookie object: undefined
+[00:00:24.845] Server  LOG      Extracted token: undefined
+[00:00:24.846] Server  LOG      No token — redirecting to login
+[00:00:24.855] Server  LOG      Middleware Hit: "/auth/login"
+[00:00:24.856] Server  LOG     Public route → allowing: "/auth/login"
+[00:00:40.821] Server  LOG      Middleware Hit: "/api/auth/signup"
+[00:00:40.821] Server  LOG     Public route → allowing: "/api/auth/signup"
+[00:00:41.122] Server  LOG     📩 Received signup body: {}
+[00:00:41.127] Server  LOG     🔍 Validation result: {}
+[00:00:41.208] Server  LOG     prisma:query "SELECT 1"
+[00:00:41.273] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"name\", \"public\".\"User\".\"avatar\", \"public\".\"User\".\"phone\", \"public\".\"User\".\"location\", \"public\".\"User\".\"bio\", \"public\".\"User\".\"joinDate\", \"public\".\"User\".\"role\"::text, \"public\".\"User\".\"isVerified\", \"public\".\"User\".\"emailNotifications\", \"public\".\"User\".\"marketingEmails\", \"public\".\"User\".\"courseRecommendations\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"email\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[00:00:41.575] Server  LOG     prisma:query "INSERT INTO \"public\".\"User\" (\"id\",\"email\",\"password\",\"name\",\"joinDate\",\"role\",\"isVerified\",\"emailNotifications\",\"marketingEmails\",\"courseRecommendations\",\"createdAt\",\"updatedAt\") VALUES ($1,$2,$3,$4,$5,CAST($6::text AS \"public\".\"Role\"),$7,$8,$9,$10,$11,$12) RETURNING \"public\".\"User\".\"id\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"name\", \"public\".\"User\".\"avatar\", \"public\".\"User\".\"phone\", \"public\".\"User\".\"location\", \"public\".\"User\".\"bio\", \"public\".\"User\".\"joinDate\", \"public\".\"User\".\"role\"::text, \"public\".\"User\".\"isVerified\", \"public\".\"User\".\"emailNotifications\", \"public\".\"User\".\"marketingEmails\", \"public\".\"User\".\"courseRecommendations\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\""
+[00:00:41.625] Server  LOG      Middleware Hit: "/dashboard"
+[00:00:41.627] Server  LOG      Cookie object: {}
+[00:00:41.629] Server  LOG      Extracted token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWkwMGk4cDgwMDAwMTBjZWF4N2k4cHFkIiwiZW1haWwiOiJhdmJoYXJhdGgxMjIxQGdtYWlsLmNvbSIsImlhdCI6MTc2MzE5NDU0MywiZXhwIjoxNzYzNzk5MzQzfQ.zAj4DX5uJj5XH1Xg3Es_sBTc7QazeUjAU1ABqjgfBmE"
+[00:00:41.637] Server  LOG      Token decoded: {}
+[00:00:41.638] Server  LOG      Token valid. User: "avbharath1221@gmail.com"
+[00:00:42.530] Server  LOG      Middleware Hit: "/icon.svg"
+[00:00:42.531] Server  LOG      Cookie object: {}
+[00:00:42.532] Server  LOG      Extracted token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWkwMGk4cDgwMDAwMTBjZWF4N2k4cHFkIiwiZW1haWwiOiJhdmJoYXJhdGgxMjIxQGdtYWlsLmNvbSIsImlhdCI6MTc2MzE5NDU0MywiZXhwIjoxNzYzNzk5MzQzfQ.zAj4DX5uJj5XH1Xg3Es_sBTc7QazeUjAU1ABqjgfBmE"
+[00:00:42.535] Server  LOG      Token decoded: {}
+[00:00:42.537] Server  LOG      Token valid. User: "avbharath1221@gmail.com"
+[00:00:42.544] Server  LOG      Middleware Hit: "/api/users/cmi00i8p8000010ceax7i8pqd/profile"
+[00:00:42.547] Server  LOG      Cookie object: {}
+[00:00:42.548] Server  LOG      Extracted token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWkwMGk4cDgwMDAwMTBjZWF4N2k4cHFkIiwiZW1haWwiOiJhdmJoYXJhdGgxMjIxQGdtYWlsLmNvbSIsImlhdCI6MTc2MzE5NDU0MywiZXhwIjoxNzYzNzk5MzQzfQ.zAj4DX5uJj5XH1Xg3Es_sBTc7QazeUjAU1ABqjgfBmE"
+[00:00:42.552] Server  LOG      Token decoded: {}
+[00:00:42.553] Server  LOG      Token valid. User: "avbharath1221@gmail.com"
+[00:00:42.618] Server  LOG      Middleware Hit: "/icon-dark-32x32.png"
+[00:00:42.619] Server  LOG      Cookie object: {}
+[00:00:42.620] Server  LOG      Extracted token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWkwMGk4cDgwMDAwMTBjZWF4N2k4cHFkIiwiZW1haWwiOiJhdmJoYXJhdGgxMjIxQGdtYWlsLmNvbSIsImlhdCI6MTc2MzE5NDU0MywiZXhwIjoxNzYzNzk5MzQzfQ.zAj4DX5uJj5XH1Xg3Es_sBTc7QazeUjAU1ABqjgfBmE"
+[00:00:42.624] Server  LOG      Token decoded: {}
+[00:00:42.625] Server  LOG      Token valid. User: "avbharath1221@gmail.com"
+[00:00:42.630] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3000/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763194544347}
+[00:00:44.272] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"name\", \"public\".\"User\".\"avatar\", \"public\".\"User\".\"phone\", \"public\".\"User\".\"location\", \"public\".\"User\".\"bio\", \"public\".\"User\".\"joinDate\", \"public\".\"User\".\"role\"::text, \"public\".\"User\".\"isVerified\", \"public\".\"User\".\"emailNotifications\", \"public\".\"User\".\"marketingEmails\", \"public\".\"User\".\"courseRecommendations\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"id\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[00:00:44.447] Server  LOG     prisma:query "SELECT \"public\".\"Enrollment\".\"id\", \"public\".\"Enrollment\".\"userId\", \"public\".\"Enrollment\".\"courseId\", \"public\".\"Enrollment\".\"progress\", \"public\".\"Enrollment\".\"lastAccessed\", \"public\".\"Enrollment\".\"enrolledAt\", \"public\".\"Enrollment\".\"completedAt\", \"public\".\"Enrollment\".\"certificateUrl\", \"public\".\"Enrollment\".\"status\"::text, \"public\".\"Enrollment\".\"createdAt\", \"public\".\"Enrollment\".\"updatedAt\" FROM \"public\".\"Enrollment\" WHERE \"public\".\"Enrollment\".\"userId\" IN ($1) OFFSET $2"
+[00:00:44.467] Server  LOG      Middleware Hit: "/api/users/cmi00i8p8000010ceax7i8pqd/profile"
+[00:00:44.468] Server  LOG      Cookie object: {}
+[00:00:44.469] Server  LOG      Extracted token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWkwMGk4cDgwMDAwMTBjZWF4N2k4cHFkIiwiZW1haWwiOiJhdmJoYXJhdGgxMjIxQGdtYWlsLmNvbSIsImlhdCI6MTc2MzE5NDU0MywiZXhwIjoxNzYzNzk5MzQzfQ.zAj4DX5uJj5XH1Xg3Es_sBTc7QazeUjAU1ABqjgfBmE"
+[00:00:44.472] Server  LOG      Token decoded: {}
+[00:00:44.474] Server  LOG      Token valid. User: "avbharath1221@gmail.com"
+[00:00:44.597] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"name\", \"public\".\"User\".\"avatar\", \"public\".\"User\".\"phone\", \"public\".\"User\".\"location\", \"public\".\"User\".\"bio\", \"public\".\"User\".\"joinDate\", \"public\".\"User\".\"role\"::text, \"public\".\"User\".\"isVerified\", \"public\".\"User\".\"emailNotifications\", \"public\".\"User\".\"marketingEmails\", \"public\".\"User\".\"courseRecommendations\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"id\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[00:00:44.668] Server  LOG     prisma:query "SELECT \"public\".\"Enrollment\".\"id\", \"public\".\"Enrollment\".\"userId\", \"public\".\"Enrollment\".\"courseId\", \"public\".\"Enrollment\".\"progress\", \"public\".\"Enrollment\".\"lastAccessed\", \"public\".\"Enrollment\".\"enrolledAt\", \"public\".\"Enrollment\".\"completedAt\", \"public\".\"Enrollment\".\"certificateUrl\", \"public\".\"Enrollment\".\"status\"::text, \"public\".\"Enrollment\".\"createdAt\", \"public\".\"Enrollment\".\"updatedAt\" FROM \"public\".\"Enrollment\" WHERE \"public\".\"Enrollment\".\"userId\" IN ($1) OFFSET $2"
+[00:00:44.678] Server  LOG      Middleware Hit: "/api/users/cmi00i8p8000010ceax7i8pqd/profile"
+[00:00:44.678] Server  LOG      Cookie object: {}
+[00:00:44.679] Server  LOG      Extracted token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWkwMGk4cDgwMDAwMTBjZWF4N2k4cHFkIiwiZW1haWwiOiJhdmJoYXJhdGgxMjIxQGdtYWlsLmNvbSIsImlhdCI6MTc2MzE5NDU0MywiZXhwIjoxNzYzNzk5MzQzfQ.zAj4DX5uJj5XH1Xg3Es_sBTc7QazeUjAU1ABqjgfBmE"
+[00:00:44.682] Server  LOG      Token decoded: {}
+[00:00:44.682] Server  LOG      Token valid. User: "avbharath1221@gmail.com"
+[00:00:44.768] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"name\", \"public\".\"User\".\"avatar\", \"public\".\"User\".\"phone\", \"public\".\"User\".\"location\", \"public\".\"User\".\"bio\", \"public\".\"User\".\"joinDate\", \"public\".\"User\".\"role\"::text, \"public\".\"User\".\"isVerified\", \"public\".\"User\".\"emailNotifications\", \"public\".\"User\".\"marketingEmails\", \"public\".\"User\".\"courseRecommendations\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"id\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[00:00:44.838] Server  LOG     prisma:query "SELECT \"public\".\"Enrollment\".\"id\", \"public\".\"Enrollment\".\"userId\", \"public\".\"Enrollment\".\"courseId\", \"public\".\"Enrollment\".\"progress\", \"public\".\"Enrollment\".\"lastAccessed\", \"public\".\"Enrollment\".\"enrolledAt\", \"public\".\"Enrollment\".\"completedAt\", \"public\".\"Enrollment\".\"certificateUrl\", \"public\".\"Enrollment\".\"status\"::text, \"public\".\"Enrollment\".\"createdAt\", \"public\".\"Enrollment\".\"updatedAt\" FROM \"public\".\"Enrollment\" WHERE \"public\".\"Enrollment\".\"userId\" IN ($1) OFFSET $2"
+[00:00:44.850] Server  LOG      Middleware Hit: "/api/users/cmi00i8p8000010ceax7i8pqd/profile"
+[00:00:44.852] Server  LOG      Cookie object: {}
+[00:00:44.852] Server  LOG      Extracted token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWkwMGk4cDgwMDAwMTBjZWF4N2k4cHFkIiwiZW1haWwiOiJhdmJoYXJhdGgxMjIxQGdtYWlsLmNvbSIsImlhdCI6MTc2MzE5NDU0MywiZXhwIjoxNzYzNzk5MzQzfQ.zAj4DX5uJj5XH1Xg3Es_sBTc7QazeUjAU1ABqjgfBmE"
+[00:00:44.855] Server  LOG      Token decoded: {}
+[00:00:44.858] Server  LOG      Token valid. User: "avbharath1221@gmail.com"
+[00:00:44.872] Server  LOG      Middleware Hit: "/api/users/cmi00i8p8000010ceax7i8pqd/dashboard"
+[00:00:44.874] Server  LOG      Cookie object: {}
+[00:00:44.875] Server  LOG      Extracted token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWkwMGk4cDgwMDAwMTBjZWF4N2k4cHFkIiwiZW1haWwiOiJhdmJoYXJhdGgxMjIxQGdtYWlsLmNvbSIsImlhdCI6MTc2MzE5NDU0MywiZXhwIjoxNzYzNzk5MzQzfQ.zAj4DX5uJj5XH1Xg3Es_sBTc7QazeUjAU1ABqjgfBmE"
+[00:00:44.877] Server  LOG      Token decoded: {}
+[00:00:44.878] Server  LOG      Token valid. User: "avbharath1221@gmail.com"
+[00:00:44.968] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"name\", \"public\".\"User\".\"avatar\", \"public\".\"User\".\"phone\", \"public\".\"User\".\"location\", \"public\".\"User\".\"bio\", \"public\".\"User\".\"joinDate\", \"public\".\"User\".\"role\"::text, \"public\".\"User\".\"isVerified\", \"public\".\"User\".\"emailNotifications\", \"public\".\"User\".\"marketingEmails\", \"public\".\"User\".\"courseRecommendations\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"id\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[00:00:45.039] Server  LOG     prisma:query "SELECT \"public\".\"Enrollment\".\"id\", \"public\".\"Enrollment\".\"userId\", \"public\".\"Enrollment\".\"courseId\", \"public\".\"Enrollment\".\"progress\", \"public\".\"Enrollment\".\"lastAccessed\", \"public\".\"Enrollment\".\"enrolledAt\", \"public\".\"Enrollment\".\"completedAt\", \"public\".\"Enrollment\".\"certificateUrl\", \"public\".\"Enrollment\".\"status\"::text, \"public\".\"Enrollment\".\"createdAt\", \"public\".\"Enrollment\".\"updatedAt\" FROM \"public\".\"Enrollment\" WHERE \"public\".\"Enrollment\".\"userId\" IN ($1) OFFSET $2"
+[00:00:45.111] Server  LOG      Middleware Hit: "/api/users/cmi00i8p8000010ceax7i8pqd/profile"
+[00:00:45.113] Server  LOG      Cookie object: {}
+[00:00:45.113] Server  LOG      Extracted token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWkwMGk4cDgwMDAwMTBjZWF4N2k4cHFkIiwiZW1haWwiOiJhdmJoYXJhdGgxMjIxQGdtYWlsLmNvbSIsImlhdCI6MTc2MzE5NDU0MywiZXhwIjoxNzYzNzk5MzQzfQ.zAj4DX5uJj5XH1Xg3Es_sBTc7QazeUjAU1ABqjgfBmE"
+[00:00:45.116] Server  LOG      Token decoded: {}
+[00:00:45.116] Server  LOG      Token valid. User: "avbharath1221@gmail.com"
+[00:00:45.202] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"name\", \"public\".\"User\".\"avatar\", \"public\".\"User\".\"phone\", \"public\".\"User\".\"location\", \"public\".\"User\".\"bio\", \"public\".\"User\".\"joinDate\", \"public\".\"User\".\"role\"::text, \"public\".\"User\".\"isVerified\", \"public\".\"User\".\"emailNotifications\", \"public\".\"User\".\"marketingEmails\", \"public\".\"User\".\"courseRecommendations\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"id\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[00:00:45.267] Server  LOG     prisma:query "SELECT \"public\".\"Enrollment\".\"id\", \"public\".\"Enrollment\".\"userId\", \"public\".\"Enrollment\".\"courseId\", \"public\".\"Enrollment\".\"progress\", \"public\".\"Enrollment\".\"lastAccessed\", \"public\".\"Enrollment\".\"enrolledAt\", \"public\".\"Enrollment\".\"completedAt\", \"public\".\"Enrollment\".\"certificateUrl\", \"public\".\"Enrollment\".\"status\"::text, \"public\".\"Enrollment\".\"createdAt\", \"public\".\"Enrollment\".\"updatedAt\" FROM \"public\".\"Enrollment\" WHERE \"public\".\"Enrollment\".\"userId\" IN ($1) OFFSET $2"
+[00:00:45.277] Server  LOG      Middleware Hit: "/api/users/cmi00i8p8000010ceax7i8pqd/profile"
+[00:00:45.278] Server  LOG      Cookie object: {}
+[00:00:45.279] Server  LOG      Extracted token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWkwMGk4cDgwMDAwMTBjZWF4N2k4cHFkIiwiZW1haWwiOiJhdmJoYXJhdGgxMjIxQGdtYWlsLmNvbSIsImlhdCI6MTc2MzE5NDU0MywiZXhwIjoxNzYzNzk5MzQzfQ.zAj4DX5uJj5XH1Xg3Es_sBTc7QazeUjAU1ABqjgfBmE"
+[00:00:45.282] Server  LOG      Token decoded: {}
+[00:00:45.283] Server  LOG      Token valid. User: "avbharath1221@gmail.com"
+[00:00:45.373] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"name\", \"public\".\"User\".\"avatar\", \"public\".\"User\".\"phone\", \"public\".\"User\".\"location\", \"public\".\"User\".\"bio\", \"public\".\"User\".\"joinDate\", \"public\".\"User\".\"role\"::text, \"public\".\"User\".\"isVerified\", \"public\".\"User\".\"emailNotifications\", \"public\".\"User\".\"marketingEmails\", \"public\".\"User\".\"courseRecommendations\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"id\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[00:00:45.424] Server  LOG      Middleware Hit: "/catalog"
+[00:00:45.425] Server  LOG      Cookie object: {}
+[00:00:45.426] Server  LOG      Extracted token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWkwMGk4cDgwMDAwMTBjZWF4N2k4cHFkIiwiZW1haWwiOiJhdmJoYXJhdGgxMjIxQGdtYWlsLmNvbSIsImlhdCI6MTc2MzE5NDU0MywiZXhwIjoxNzYzNzk5MzQzfQ.zAj4DX5uJj5XH1Xg3Es_sBTc7QazeUjAU1ABqjgfBmE"
+[00:00:45.428] Server  LOG      Token decoded: {}
+[00:00:45.429] Server  LOG      Token valid. User: "avbharath1221@gmail.com"
+[00:00:45.432] Server  LOG     prisma:query "SELECT \"public\".\"Enrollment\".\"id\", \"public\".\"Enrollment\".\"userId\", \"public\".\"Enrollment\".\"courseId\", \"public\".\"Enrollment\".\"progress\", \"public\".\"Enrollment\".\"lastAccessed\", \"public\".\"Enrollment\".\"enrolledAt\", \"public\".\"Enrollment\".\"completedAt\", \"public\".\"Enrollment\".\"certificateUrl\", \"public\".\"Enrollment\".\"status\"::text, \"public\".\"Enrollment\".\"createdAt\", \"public\".\"Enrollment\".\"updatedAt\" FROM \"public\".\"Enrollment\" WHERE \"public\".\"Enrollment\".\"userId\" IN ($1) OFFSET $2"
+[00:00:46.240] Server  LOG      Middleware Hit: "/api/users/cmi00i8p8000010ceax7i8pqd/profile"
+[00:00:46.241] Server  LOG      Cookie object: {}
+[00:00:46.242] Server  LOG      Extracted token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWkwMGk4cDgwMDAwMTBjZWF4N2k4cHFkIiwiZW1haWwiOiJhdmJoYXJhdGgxMjIxQGdtYWlsLmNvbSIsImlhdCI6MTc2MzE5NDU0MywiZXhwIjoxNzYzNzk5MzQzfQ.zAj4DX5uJj5XH1Xg3Es_sBTc7QazeUjAU1ABqjgfBmE"
+[00:00:46.245] Server  LOG      Token decoded: {}
+[00:00:46.246] Server  LOG      Token valid. User: "avbharath1221@gmail.com"
+[00:00:46.255] Server  LOG      Middleware Hit: "/api/courses"
+[00:00:46.257] Server  LOG     Public GET /api/courses route → allowing: "/api/courses"
+[00:00:46.339] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/catalog color: rgb(120, 120, 120) color: inherit {"dp":"/catalog","o":"http://localhost:3000/catalog","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763194548058}
+[00:00:46.387] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"name\", \"public\".\"User\".\"avatar\", \"public\".\"User\".\"phone\", \"public\".\"User\".\"location\", \"public\".\"User\".\"bio\", \"public\".\"User\".\"joinDate\", \"public\".\"User\".\"role\"::text, \"public\".\"User\".\"isVerified\", \"public\".\"User\".\"emailNotifications\", \"public\".\"User\".\"marketingEmails\", \"public\".\"User\".\"courseRecommendations\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"id\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[00:00:46.527] Server  LOG     prisma:query "SELECT \"public\".\"Enrollment\".\"id\", \"public\".\"Enrollment\".\"userId\", \"public\".\"Enrollment\".\"courseId\", \"public\".\"Enrollment\".\"progress\", \"public\".\"Enrollment\".\"lastAccessed\", \"public\".\"Enrollment\".\"enrolledAt\", \"public\".\"Enrollment\".\"completedAt\", \"public\".\"Enrollment\".\"certificateUrl\", \"public\".\"Enrollment\".\"status\"::text, \"public\".\"Enrollment\".\"createdAt\", \"public\".\"Enrollment\".\"updatedAt\" FROM \"public\".\"Enrollment\" WHERE \"public\".\"Enrollment\".\"userId\" IN ($1) OFFSET $2"
+[00:00:46.539] Server  LOG      Middleware Hit: "/api/users/cmi00i8p8000010ceax7i8pqd/profile"
+[00:00:46.540] Server  LOG      Cookie object: {}
+[00:00:46.541] Server  LOG      Extracted token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWkwMGk4cDgwMDAwMTBjZWF4N2k4cHFkIiwiZW1haWwiOiJhdmJoYXJhdGgxMjIxQGdtYWlsLmNvbSIsImlhdCI6MTc2MzE5NDU0MywiZXhwIjoxNzYzNzk5MzQzfQ.zAj4DX5uJj5XH1Xg3Es_sBTc7QazeUjAU1ABqjgfBmE"
+[00:00:46.544] Server  LOG      Token decoded: {}
+[00:00:46.544] Server  LOG      Token valid. User: "avbharath1221@gmail.com"
+[00:00:46.653] Server  LOG     prisma:query "SELECT COUNT(*) FROM (SELECT \"public\".\"Course\".\"id\" FROM \"public\".\"Course\" WHERE \"public\".\"Course\".\"status\" = CAST($1::text AS \"public\".\"CourseStatus\") OFFSET $2) AS \"sub\""
+[00:00:46.832] Server  LOG     prisma:query "SELECT \"public\".\"Course\".\"id\", \"public\".\"Course\".\"title\", \"public\".\"Course\".\"description\", \"public\".\"Course\".\"thumbnail\", \"public\".\"Course\".\"price\", \"public\".\"Course\".\"category\"::text, \"public\".\"Course\".\"difficulty\"::text, \"public\".\"Course\".\"instructorId\", \"public\".\"Course\".\"rating\", \"public\".\"Course\".\"studentsEnrolled\", \"public\".\"Course\".\"duration\", \"public\".\"Course\".\"highlights\", \"public\".\"Course\".\"requirements\", \"public\".\"Course\".\"whatYouLearn\", \"public\".\"Course\".\"features\", \"public\".\"Course\".\"status\"::text, \"public\".\"Course\".\"createdAt\", \"public\".\"Course\".\"updatedAt\" FROM \"public\".\"Course\" WHERE \"public\".\"Course\".\"status\" = CAST($1::text AS \"public\".\"CourseStatus\") ORDER BY \"public\".\"Course\".\"createdAt\" DESC LIMIT $2 OFFSET $3"
+[00:00:46.962] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"name\", \"public\".\"User\".\"avatar\" FROM \"public\".\"User\" WHERE \"public\".\"User\".\"id\" IN ($1) OFFSET $2"
+[00:00:46.977] Server  LOG      Middleware Hit: "/api/courses"
+[00:00:46.978] Server  LOG     Public GET /api/courses route → allowing: "/api/courses"
+[00:00:47.038] Server  LOG     prisma:query "SELECT \"public\".\"Enrollment\".\"id\", \"public\".\"Enrollment\".\"userId\", \"public\".\"Enrollment\".\"courseId\", \"public\".\"Enrollment\".\"progress\", \"public\".\"Enrollment\".\"lastAccessed\", \"public\".\"Enrollment\".\"enrolledAt\", \"public\".\"Enrollment\".\"completedAt\", \"public\".\"Enrollment\".\"certificateUrl\", \"public\".\"Enrollment\".\"status\"::text, \"public\".\"Enrollment\".\"createdAt\", \"public\".\"Enrollment\".\"updatedAt\" FROM \"public\".\"Enrollment\" WHERE \"public\".\"Enrollment\".\"userId\" = $1 ORDER BY \"public\".\"Enrollment\".\"lastAccessed\" DESC LIMIT $2 OFFSET $3"
+[00:00:47.061] Server  LOG     prisma:query "SELECT COUNT(*) FROM (SELECT \"public\".\"Course\".\"id\" FROM \"public\".\"Course\" WHERE \"public\".\"Course\".\"status\" = CAST($1::text AS \"public\".\"CourseStatus\") OFFSET $2) AS \"sub\""
+[00:00:47.095] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"name\", \"public\".\"User\".\"avatar\", \"public\".\"User\".\"phone\", \"public\".\"User\".\"location\", \"public\".\"User\".\"bio\", \"public\".\"User\".\"joinDate\", \"public\".\"User\".\"role\"::text, \"public\".\"User\".\"isVerified\", \"public\".\"User\".\"emailNotifications\", \"public\".\"User\".\"marketingEmails\", \"public\".\"User\".\"courseRecommendations\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"id\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[00:00:47.130] Server  LOG     prisma:query "SELECT \"public\".\"Course\".\"id\", \"public\".\"Course\".\"title\", \"public\".\"Course\".\"description\", \"public\".\"Course\".\"thumbnail\", \"public\".\"Course\".\"price\", \"public\".\"Course\".\"category\"::text, \"public\".\"Course\".\"difficulty\"::text, \"public\".\"Course\".\"instructorId\", \"public\".\"Course\".\"rating\", \"public\".\"Course\".\"studentsEnrolled\", \"public\".\"Course\".\"duration\", \"public\".\"Course\".\"highlights\", \"public\".\"Course\".\"requirements\", \"public\".\"Course\".\"whatYouLearn\", \"public\".\"Course\".\"features\", \"public\".\"Course\".\"status\"::text, \"public\".\"Course\".\"createdAt\", \"public\".\"Course\".\"updatedAt\" FROM \"public\".\"Course\" WHERE \"public\".\"Course\".\"status\" = CAST($1::text AS \"public\".\"CourseStatus\") ORDER BY \"public\".\"Course\".\"createdAt\" DESC LIMIT $2 OFFSET $3"
+[00:00:47.152] Server  LOG     prisma:query "SELECT \"public\".\"Course\".\"id\", \"public\".\"Course\".\"title\", \"public\".\"Course\".\"description\", \"public\".\"Course\".\"thumbnail\", \"public\".\"Course\".\"price\", \"public\".\"Course\".\"category\"::text, \"public\".\"Course\".\"difficulty\"::text, \"public\".\"Course\".\"instructorId\", \"public\".\"Course\".\"rating\", \"public\".\"Course\".\"studentsEnrolled\", \"public\".\"Course\".\"duration\", \"public\".\"Course\".\"highlights\", \"public\".\"Course\".\"requirements\", \"public\".\"Course\".\"whatYouLearn\", \"public\".\"Course\".\"features\", \"public\".\"Course\".\"status\"::text, \"public\".\"Course\".\"createdAt\", \"public\".\"Course\".\"updatedAt\" FROM \"public\".\"Course\" WHERE (\"public\".\"Course\".\"status\" = CAST($1::text AS \"public\".\"CourseStatus\") AND (\"public\".\"Course\".\"id\") NOT IN (SELECT \"t1\".\"courseId\" FROM \"public\".\"Enrollment\" AS \"t1\" WHERE (\"t1\".\"userId\" = $2 AND \"t1\".\"courseId\" IS NOT NULL))) ORDER BY \"public\".\"Course\".\"id\" ASC LIMIT $3 OFFSET $4"
+[00:00:47.197] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"name\", \"public\".\"User\".\"avatar\" FROM \"public\".\"User\" WHERE \"public\".\"User\".\"id\" IN ($1) OFFSET $2"
+[00:00:47.209] Server  LOG     prisma:query "SELECT \"public\".\"Enrollment\".\"id\", \"public\".\"Enrollment\".\"userId\", \"public\".\"Enrollment\".\"courseId\", \"public\".\"Enrollment\".\"progress\", \"public\".\"Enrollment\".\"lastAccessed\", \"public\".\"Enrollment\".\"enrolledAt\", \"public\".\"Enrollment\".\"completedAt\", \"public\".\"Enrollment\".\"certificateUrl\", \"public\".\"Enrollment\".\"status\"::text, \"public\".\"Enrollment\".\"createdAt\", \"public\".\"Enrollment\".\"updatedAt\" FROM \"public\".\"Enrollment\" WHERE \"public\".\"Enrollment\".\"userId\" IN ($1) OFFSET $2"
+[00:00:47.221] Server  LOG      Middleware Hit: "/api/users/cmi00i8p8000010ceax7i8pqd/profile"
+[00:00:47.222] Server  LOG      Cookie object: {}
+[00:00:47.222] Server  LOG      Extracted token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWkwMGk4cDgwMDAwMTBjZWF4N2k4cHFkIiwiZW1haWwiOiJhdmJoYXJhdGgxMjIxQGdtYWlsLmNvbSIsImlhdCI6MTc2MzE5NDU0MywiZXhwIjoxNzYzNzk5MzQzfQ.zAj4DX5uJj5XH1Xg3Es_sBTc7QazeUjAU1ABqjgfBmE"
+[00:00:47.228] Server  LOG      Token decoded: {}
+[00:00:47.229] Server  LOG      Token valid. User: "avbharath1221@gmail.com"
+[00:00:47.263] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"name\" FROM \"public\".\"User\" WHERE \"public\".\"User\".\"id\" IN ($1) OFFSET $2"
+[00:00:47.364] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"name\", \"public\".\"User\".\"avatar\", \"public\".\"User\".\"phone\", \"public\".\"User\".\"location\", \"public\".\"User\".\"bio\", \"public\".\"User\".\"joinDate\", \"public\".\"User\".\"role\"::text, \"public\".\"User\".\"isVerified\", \"public\".\"User\".\"emailNotifications\", \"public\".\"User\".\"marketingEmails\", \"public\".\"User\".\"courseRecommendations\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"id\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[00:00:47.463] Server  LOG     prisma:query "SELECT \"public\".\"Enrollment\".\"id\", \"public\".\"Enrollment\".\"userId\", \"public\".\"Enrollment\".\"courseId\", \"public\".\"Enrollment\".\"progress\", \"public\".\"Enrollment\".\"lastAccessed\", \"public\".\"Enrollment\".\"enrolledAt\", \"public\".\"Enrollment\".\"completedAt\", \"public\".\"Enrollment\".\"certificateUrl\", \"public\".\"Enrollment\".\"status\"::text, \"public\".\"Enrollment\".\"createdAt\", \"public\".\"Enrollment\".\"updatedAt\" FROM \"public\".\"Enrollment\" WHERE \"public\".\"Enrollment\".\"userId\" IN ($1) OFFSET $2"
+[00:00:47.488] Server  LOG      Middleware Hit: "/api/users/cmi00i8p8000010ceax7i8pqd/profile"
+[00:00:47.489] Server  LOG      Cookie object: {}
+[00:00:47.490] Server  LOG      Extracted token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWkwMGk4cDgwMDAwMTBjZWF4N2k4cHFkIiwiZW1haWwiOiJhdmJoYXJhdGgxMjIxQGdtYWlsLmNvbSIsImlhdCI6MTc2MzE5NDU0MywiZXhwIjoxNzYzNzk5MzQzfQ.zAj4DX5uJj5XH1Xg3Es_sBTc7QazeUjAU1ABqjgfBmE"
+[00:00:47.492] Server  LOG      Token decoded: {}
+[00:00:47.493] Server  LOG      Token valid. User: "avbharath1221@gmail.com"
+[00:00:47.562] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"name\", \"public\".\"User\".\"avatar\", \"public\".\"User\".\"phone\", \"public\".\"User\".\"location\", \"public\".\"User\".\"bio\", \"public\".\"User\".\"joinDate\", \"public\".\"User\".\"role\"::text, \"public\".\"User\".\"isVerified\", \"public\".\"User\".\"emailNotifications\", \"public\".\"User\".\"marketingEmails\", \"public\".\"User\".\"courseRecommendations\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"id\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[00:00:47.618] Server  LOG     prisma:query "SELECT \"public\".\"Enrollment\".\"id\", \"public\".\"Enrollment\".\"userId\", \"public\".\"Enrollment\".\"courseId\", \"public\".\"Enrollment\".\"progress\", \"public\".\"Enrollment\".\"lastAccessed\", \"public\".\"Enrollment\".\"enrolledAt\", \"public\".\"Enrollment\".\"completedAt\", \"public\".\"Enrollment\".\"certificateUrl\", \"public\".\"Enrollment\".\"status\"::text, \"public\".\"Enrollment\".\"createdAt\", \"public\".\"Enrollment\".\"updatedAt\" FROM \"public\".\"Enrollment\" WHERE \"public\".\"Enrollment\".\"userId\" IN ($1) OFFSET $2"
+[00:00:47.990] Server  LOG      Middleware Hit: "/course/cmhzzj76q000sqzb99vu9cjou"
+[00:00:47.991] Server  LOG      Cookie object: {}
+[00:00:47.991] Server  LOG      Extracted token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWkwMGk4cDgwMDAwMTBjZWF4N2k4cHFkIiwiZW1haWwiOiJhdmJoYXJhdGgxMjIxQGdtYWlsLmNvbSIsImlhdCI6MTc2MzE5NDU0MywiZXhwIjoxNzYzNzk5MzQzfQ.zAj4DX5uJj5XH1Xg3Es_sBTc7QazeUjAU1ABqjgfBmE"
+[00:00:47.993] Server  LOG      Token decoded: {}
+[00:00:47.994] Server  LOG      Token valid. User: "avbharath1221@gmail.com"
+[00:00:49.709] Server  LOG      Middleware Hit: "/api/users/cmi00i8p8000010ceax7i8pqd/profile"
+[00:00:49.710] Server  LOG      Cookie object: {}
+[00:00:49.711] Server  LOG      Extracted token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWkwMGk4cDgwMDAwMTBjZWF4N2k4cHFkIiwiZW1haWwiOiJhdmJoYXJhdGgxMjIxQGdtYWlsLmNvbSIsImlhdCI6MTc2MzE5NDU0MywiZXhwIjoxNzYzNzk5MzQzfQ.zAj4DX5uJj5XH1Xg3Es_sBTc7QazeUjAU1ABqjgfBmE"
+[00:00:49.713] Server  LOG      Token decoded: {}
+[00:00:49.714] Server  LOG      Token valid. User: "avbharath1221@gmail.com"
+[00:00:49.720] Server  LOG      Middleware Hit: "/api/courses/cmhzzj76q000sqzb99vu9cjou"
+[00:00:49.720] Server  LOG     Public GET /api/courses route → allowing: "/api/courses/cmhzzj76q000sqzb99vu9cjou"
+[00:00:49.789] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/course/cmhzzj76q000sqzb99vu9cjou color: rgb(120, 120, 120) color: inherit {"dp":"/course/[id]","o":"http://localhost:3000/course/cmhzzj76q000sqzb99vu9cjou","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763194551508}
+[00:00:49.823] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"name\", \"public\".\"User\".\"avatar\", \"public\".\"User\".\"phone\", \"public\".\"User\".\"location\", \"public\".\"User\".\"bio\", \"public\".\"User\".\"joinDate\", \"public\".\"User\".\"role\"::text, \"public\".\"User\".\"isVerified\", \"public\".\"User\".\"emailNotifications\", \"public\".\"User\".\"marketingEmails\", \"public\".\"User\".\"courseRecommendations\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"id\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[00:00:49.952] Server  LOG     prisma:query "SELECT \"public\".\"Enrollment\".\"id\", \"public\".\"Enrollment\".\"userId\", \"public\".\"Enrollment\".\"courseId\", \"public\".\"Enrollment\".\"progress\", \"public\".\"Enrollment\".\"lastAccessed\", \"public\".\"Enrollment\".\"enrolledAt\", \"public\".\"Enrollment\".\"completedAt\", \"public\".\"Enrollment\".\"certificateUrl\", \"public\".\"Enrollment\".\"status\"::text, \"public\".\"Enrollment\".\"createdAt\", \"public\".\"Enrollment\".\"updatedAt\" FROM \"public\".\"Enrollment\" WHERE \"public\".\"Enrollment\".\"userId\" IN ($1) OFFSET $2"
+[00:00:49.964] Server  LOG      Middleware Hit: "/api/users/cmi00i8p8000010ceax7i8pqd/profile"
+[00:00:49.965] Server  LOG      Cookie object: {}
+[00:00:49.966] Server  LOG      Extracted token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWkwMGk4cDgwMDAwMTBjZWF4N2k4cHFkIiwiZW1haWwiOiJhdmJoYXJhdGgxMjIxQGdtYWlsLmNvbSIsImlhdCI6MTc2MzE5NDU0MywiZXhwIjoxNzYzNzk5MzQzfQ.zAj4DX5uJj5XH1Xg3Es_sBTc7QazeUjAU1ABqjgfBmE"
+[00:00:49.969] Server  LOG      Token decoded: {}
+[00:00:49.970] Server  LOG      Token valid. User: "avbharath1221@gmail.com"
+[00:00:50.048] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"name\", \"public\".\"User\".\"avatar\", \"public\".\"User\".\"phone\", \"public\".\"User\".\"location\", \"public\".\"User\".\"bio\", \"public\".\"User\".\"joinDate\", \"public\".\"User\".\"role\"::text, \"public\".\"User\".\"isVerified\", \"public\".\"User\".\"emailNotifications\", \"public\".\"User\".\"marketingEmails\", \"public\".\"User\".\"courseRecommendations\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"id\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[00:00:50.099] Server  LOG     prisma:query "SELECT \"public\".\"Enrollment\".\"id\", \"public\".\"Enrollment\".\"userId\", \"public\".\"Enrollment\".\"courseId\", \"public\".\"Enrollment\".\"progress\", \"public\".\"Enrollment\".\"lastAccessed\", \"public\".\"Enrollment\".\"enrolledAt\", \"public\".\"Enrollment\".\"completedAt\", \"public\".\"Enrollment\".\"certificateUrl\", \"public\".\"Enrollment\".\"status\"::text, \"public\".\"Enrollment\".\"createdAt\", \"public\".\"Enrollment\".\"updatedAt\" FROM \"public\".\"Enrollment\" WHERE \"public\".\"Enrollment\".\"userId\" IN ($1) OFFSET $2"
+[00:00:50.107] Server  LOG      Middleware Hit: "/api/users/cmi00i8p8000010ceax7i8pqd/profile"
+[00:00:50.108] Server  LOG      Cookie object: {}
+[00:00:50.108] Server  LOG      Extracted token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWkwMGk4cDgwMDAwMTBjZWF4N2k4cHFkIiwiZW1haWwiOiJhdmJoYXJhdGgxMjIxQGdtYWlsLmNvbSIsImlhdCI6MTc2MzE5NDU0MywiZXhwIjoxNzYzNzk5MzQzfQ.zAj4DX5uJj5XH1Xg3Es_sBTc7QazeUjAU1ABqjgfBmE"
+[00:00:50.111] Server  LOG      Token decoded: {}
+[00:00:50.112] Server  LOG      Token valid. User: "avbharath1221@gmail.com"
+[00:00:50.188] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"name\", \"public\".\"User\".\"avatar\", \"public\".\"User\".\"phone\", \"public\".\"User\".\"location\", \"public\".\"User\".\"bio\", \"public\".\"User\".\"joinDate\", \"public\".\"User\".\"role\"::text, \"public\".\"User\".\"isVerified\", \"public\".\"User\".\"emailNotifications\", \"public\".\"User\".\"marketingEmails\", \"public\".\"User\".\"courseRecommendations\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"id\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[00:00:50.233] Server  LOG     prisma:query "SELECT \"public\".\"Enrollment\".\"id\", \"public\".\"Enrollment\".\"userId\", \"public\".\"Enrollment\".\"courseId\", \"public\".\"Enrollment\".\"progress\", \"public\".\"Enrollment\".\"lastAccessed\", \"public\".\"Enrollment\".\"enrolledAt\", \"public\".\"Enrollment\".\"completedAt\", \"public\".\"Enrollment\".\"certificateUrl\", \"public\".\"Enrollment\".\"status\"::text, \"public\".\"Enrollment\".\"createdAt\", \"public\".\"Enrollment\".\"updatedAt\" FROM \"public\".\"Enrollment\" WHERE \"public\".\"Enrollment\".\"userId\" IN ($1) OFFSET $2"
+[00:00:50.242] Server  LOG      Middleware Hit: "/api/users/cmi00i8p8000010ceax7i8pqd/profile"
+[00:00:50.243] Server  LOG      Cookie object: {}
+[00:00:50.243] Server  LOG      Extracted token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWkwMGk4cDgwMDAwMTBjZWF4N2k4cHFkIiwiZW1haWwiOiJhdmJoYXJhdGgxMjIxQGdtYWlsLmNvbSIsImlhdCI6MTc2MzE5NDU0MywiZXhwIjoxNzYzNzk5MzQzfQ.zAj4DX5uJj5XH1Xg3Es_sBTc7QazeUjAU1ABqjgfBmE"
+[00:00:50.246] Server  LOG      Token decoded: {}
+[00:00:50.247] Server  LOG      Token valid. User: "avbharath1221@gmail.com"
+[00:00:50.321] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"name\", \"public\".\"User\".\"avatar\", \"public\".\"User\".\"phone\", \"public\".\"User\".\"location\", \"public\".\"User\".\"bio\", \"public\".\"User\".\"joinDate\", \"public\".\"User\".\"role\"::text, \"public\".\"User\".\"isVerified\", \"public\".\"User\".\"emailNotifications\", \"public\".\"User\".\"marketingEmails\", \"public\".\"User\".\"courseRecommendations\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"id\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[00:00:50.372] Server  LOG     prisma:query "SELECT \"public\".\"Enrollment\".\"id\", \"public\".\"Enrollment\".\"userId\", \"public\".\"Enrollment\".\"courseId\", \"public\".\"Enrollment\".\"progress\", \"public\".\"Enrollment\".\"lastAccessed\", \"public\".\"Enrollment\".\"enrolledAt\", \"public\".\"Enrollment\".\"completedAt\", \"public\".\"Enrollment\".\"certificateUrl\", \"public\".\"Enrollment\".\"status\"::text, \"public\".\"Enrollment\".\"createdAt\", \"public\".\"Enrollment\".\"updatedAt\" FROM \"public\".\"Enrollment\" WHERE \"public\".\"Enrollment\".\"userId\" IN ($1) OFFSET $2"
+[00:00:51.144] Server  LOG     [api/courses/[id] GET] request.url= "http://localhost:3000/api/courses/cmhzzj76q000sqzb99vu9cjou"
+[00:00:51.187] Server  ERROR   C:\Users\avbha\OneDrive\Desktop\projects\educify\node_modules\next\dist\compiled\next-server\app-route-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:51.196] Server  ERROR   C:\Users\avbha\OneDrive\Desktop\projects\educify\node_modules\next\dist\client\lib\console.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:51.198] Server  ERROR   C:\Users\avbha\OneDrive\Desktop\projects\educify\node_modules\next\dist\server\node-environment-extensions\console-file.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:51.199] Server  ERROR   C:\Users\avbha\OneDrive\Desktop\projects\educify\node_modules\next\dist\server\node-environment-extensions\console-exit.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:51.205] Server  ERROR   C:\Users\avbha\OneDrive\Desktop\projects\educify\node_modules\next\dist\server\node-environment-extensions\console-dim.external.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:51.286] Server  ERROR   C:\Users\avbha\OneDrive\Desktop\projects\educify\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:51.288] Server  ERROR   C:\Users\avbha\OneDrive\Desktop\projects\educify\.next\dev\server\chunks\[root-of-the-server]__6a8f7fc1._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:51.290] Server  ERROR   C:\Users\avbha\OneDrive\Desktop\projects\educify\node_modules\next\dist\server\lib\trace\tracer.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:51.294] Server  WARN    Error: Route "/api/courses/[id]" used `...params` or similar expression. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:00:51.295] Server  LOG     [api/courses/[id] GET] params= {}
+[00:00:51.299] Server  ERROR   C:\Users\avbha\OneDrive\Desktop\projects\educify\node_modules\next\dist\compiled\next-server\app-route-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:51.299] Server  ERROR   C:\Users\avbha\OneDrive\Desktop\projects\educify\.next\dev\server\chunks\[root-of-the-server]__6a8f7fc1._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:51.301] Server  ERROR   C:\Users\avbha\OneDrive\Desktop\projects\educify\node_modules\next\dist\server\lib\trace\tracer.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:51.303] Server  WARN    Error: Route "/api/courses/[id]" used `params.id`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:00:51.338] Server  ERROR   C:\Users\avbha\OneDrive\Desktop\projects\educify\.next\dev\server\chunks\[root-of-the-server]__6a8f7fc1._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:51.341] Server  ERROR   C:\Users\avbha\OneDrive\Desktop\projects\educify\node_modules\@prisma\client\runtime\library.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: TypeError [ERR_INVALID_ARG_TYPE]: The "payload" argument must be of type object. Received null
+[00:00:51.343] Server  ERROR   C:\Users\avbha\OneDrive\Desktop\projects\educify\node_modules\next\dist\compiled\next-server\app-route-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:51.359] Server  ERROR   C:\Users\avbha\OneDrive\Desktop\projects\educify\.next\dev\server\chunks\8ceb5_2ed5ea0a._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:51.363] Server  ERROR   C:\Users\avbha\OneDrive\Desktop\projects\educify\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:51.367] Server  ERROR   C:\Users\avbha\OneDrive\Desktop\projects\educify\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:51.369] Server  ERROR   C:\Users\avbha\OneDrive\Desktop\projects\educify\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:51.370] Server  ERROR   C:\Users\avbha\OneDrive\Desktop\projects\educify\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:51.372] Server  ERROR   C:\Users\avbha\OneDrive\Desktop\projects\educify\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:51.374] Server  ERROR   C:\Users\avbha\OneDrive\Desktop\projects\educify\node_modules\next\dist\server\lib\start-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:51.376] Server  ERROR   Get course error: PrismaClientValidationError: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].course.findUnique()` invocation in
+C:\Users\avbha\OneDrive\Desktop\projects\educify\.next\dev\server\chunks\[root-of-the-server]__6a8f7fc1._.js:325:205
+
+  322 console.log('[api/courses/[id] GET] request.url=', request.url);
+  323 console.log('[api/courses/[id] GET] params=', params);
+  324 const { id } = params;
+→ 325 const course = await __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].course.findUnique({
+        where: {
+          id: undefined,
+      ?   AND?: CourseWhereInput | CourseWhereInput[],
+      ?   OR?: CourseWhereInput[],
+      ?   NOT?: CourseWhereInput | CourseWhereInput[],
+      ?   title?: StringFilter | String,
+      ?   description?: StringFilter | String,
+      ?   thumbnail?: StringNullableFilter | String | Null,
+      ?   price?: DecimalFilter | Decimal,
+      ?   category?: EnumCourseCategoryFilter | CourseCategory,
+      ?   difficulty?: EnumDifficultyFilter | Difficulty,
+      ?   instructorId?: StringFilter | String,
+      ?   rating?: DecimalFilter | Decimal,
+      ?   studentsEnrolled?: IntFilter | Int,
+      ?   duration?: StringFilter | String,
+      ?   highlights?: StringNullableListFilter,
+      ?   requirements?: StringNullableListFilter,
+      ?   whatYouLearn?: StringNullableListFilter,
+      ?   features?: StringNullableListFilter,
+      ?   status?: EnumCourseStatusFilter | CourseStatus,
+      ?   createdAt?: DateTimeFilter | DateTime,
+      ?   updatedAt?: DateTimeFilter | DateTime,
+      ?   instructor?: UserRelationFilter | UserWhereInput,
+      ?   modules?: ModuleListRelationFilter,
+      ?   lessons?: LessonListRelationFilter,
+      ?   enrollments?: EnrollmentListRelationFilter,
+      ?   wishlist?: WishlistListRelationFilter,
+      ?   reviews?: ReviewListRelationFilter
+        },
+        include: {
+          instructor: {
+            select: {
+              id: true,
+              name: true,
+              bio: true,
+              avatar: true
+            }
+          },
+          modules: {
+            orderBy: {
+              order: "asc"
+            }
+          },
+          lessons: {
+            orderBy: {
+              order: "asc"
+            }
+          }
+        }
+      })
+
+Argument `where` of type CourseWhereUniqueInput needs at least one of `id` arguments. Available options are marked with ?.
+[00:00:51.398] Server  LOG      Middleware Hit: "/api/courses/cmhzzj76q000sqzb99vu9cjou"
+[00:00:51.399] Server  LOG     Public GET /api/courses route → allowing: "/api/courses/cmhzzj76q000sqzb99vu9cjou"
+[00:00:51.432] Server  LOG     [api/courses/[id] GET] request.url= "http://localhost:3000/api/courses/cmhzzj76q000sqzb99vu9cjou"
+[00:00:51.438] Server  ERROR   C:\Users\avbha\OneDrive\Desktop\projects\educify\node_modules\next\dist\compiled\next-server\app-route-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:51.440] Server  ERROR   C:\Users\avbha\OneDrive\Desktop\projects\educify\node_modules\next\dist\client\lib\console.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:51.440] Server  ERROR   C:\Users\avbha\OneDrive\Desktop\projects\educify\node_modules\next\dist\server\node-environment-extensions\console-file.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:51.441] Server  ERROR   C:\Users\avbha\OneDrive\Desktop\projects\educify\node_modules\next\dist\server\node-environment-extensions\console-exit.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:51.442] Server  ERROR   C:\Users\avbha\OneDrive\Desktop\projects\educify\node_modules\next\dist\server\node-environment-extensions\console-dim.external.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:51.447] Server  ERROR   C:\Users\avbha\OneDrive\Desktop\projects\educify\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:51.449] Server  ERROR   C:\Users\avbha\OneDrive\Desktop\projects\educify\.next\dev\server\chunks\[root-of-the-server]__6a8f7fc1._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:51.450] Server  ERROR   C:\Users\avbha\OneDrive\Desktop\projects\educify\node_modules\next\dist\server\lib\trace\tracer.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:51.452] Server  WARN    Error: Route "/api/courses/[id]" used `...params` or similar expression. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:00:51.453] Server  LOG     [api/courses/[id] GET] params= {}
+[00:00:51.455] Server  ERROR   C:\Users\avbha\OneDrive\Desktop\projects\educify\node_modules\next\dist\compiled\next-server\app-route-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:51.456] Server  ERROR   C:\Users\avbha\OneDrive\Desktop\projects\educify\.next\dev\server\chunks\[root-of-the-server]__6a8f7fc1._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:51.457] Server  ERROR   C:\Users\avbha\OneDrive\Desktop\projects\educify\node_modules\next\dist\server\lib\trace\tracer.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:51.459] Server  WARN    Error: Route "/api/courses/[id]" used `params.id`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:00:51.470] Server  ERROR   C:\Users\avbha\OneDrive\Desktop\projects\educify\.next\dev\server\chunks\[root-of-the-server]__6a8f7fc1._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:51.471] Server  ERROR   C:\Users\avbha\OneDrive\Desktop\projects\educify\node_modules\@prisma\client\runtime\library.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: TypeError [ERR_INVALID_ARG_TYPE]: The "payload" argument must be of type object. Received null
+[00:00:51.472] Server  ERROR   C:\Users\avbha\OneDrive\Desktop\projects\educify\node_modules\next\dist\compiled\next-server\app-route-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:51.473] Server  ERROR   C:\Users\avbha\OneDrive\Desktop\projects\educify\.next\dev\server\chunks\8ceb5_2ed5ea0a._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:51.474] Server  ERROR   C:\Users\avbha\OneDrive\Desktop\projects\educify\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:51.475] Server  ERROR   C:\Users\avbha\OneDrive\Desktop\projects\educify\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:51.476] Server  ERROR   C:\Users\avbha\OneDrive\Desktop\projects\educify\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:51.476] Server  ERROR   C:\Users\avbha\OneDrive\Desktop\projects\educify\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:51.477] Server  ERROR   C:\Users\avbha\OneDrive\Desktop\projects\educify\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:51.478] Server  ERROR   C:\Users\avbha\OneDrive\Desktop\projects\educify\node_modules\next\dist\server\lib\start-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:51.480] Server  ERROR   Get course error: PrismaClientValidationError: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].course.findUnique()` invocation in
+C:\Users\avbha\OneDrive\Desktop\projects\educify\.next\dev\server\chunks\[root-of-the-server]__6a8f7fc1._.js:325:205
+
+  322 console.log('[api/courses/[id] GET] request.url=', request.url);
+  323 console.log('[api/courses/[id] GET] params=', params);
+  324 const { id } = params;
+→ 325 const course = await __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].course.findUnique({
+        where: {
+          id: undefined,
+      ?   AND?: CourseWhereInput | CourseWhereInput[],
+      ?   OR?: CourseWhereInput[],
+      ?   NOT?: CourseWhereInput | CourseWhereInput[],
+      ?   title?: StringFilter | String,
+      ?   description?: StringFilter | String,
+      ?   thumbnail?: StringNullableFilter | String | Null,
+      ?   price?: DecimalFilter | Decimal,
+      ?   category?: EnumCourseCategoryFilter | CourseCategory,
+      ?   difficulty?: EnumDifficultyFilter | Difficulty,
+      ?   instructorId?: StringFilter | String,
+      ?   rating?: DecimalFilter | Decimal,
+      ?   studentsEnrolled?: IntFilter | Int,
+      ?   duration?: StringFilter | String,
+      ?   highlights?: StringNullableListFilter,
+      ?   requirements?: StringNullableListFilter,
+      ?   whatYouLearn?: StringNullableListFilter,
+      ?   features?: StringNullableListFilter,
+      ?   status?: EnumCourseStatusFilter | CourseStatus,
+      ?   createdAt?: DateTimeFilter | DateTime,
+      ?   updatedAt?: DateTimeFilter | DateTime,
+      ?   instructor?: UserRelationFilter | UserWhereInput,
+      ?   modules?: ModuleListRelationFilter,
+      ?   lessons?: LessonListRelationFilter,
+      ?   enrollments?: EnrollmentListRelationFilter,
+      ?   wishlist?: WishlistListRelationFilter,
+      ?   reviews?: ReviewListRelationFilter
+        },
+        include: {
+          instructor: {
+            select: {
+              id: true,
+              name: true,
+              bio: true,
+              avatar: true
+            }
+          },
+          modules: {
+            orderBy: {
+              order: "asc"
+            }
+          },
+          lessons: {
+            orderBy: {
+              order: "asc"
+            }
+          }
+        }
+      })
+
+Argument `where` of type CourseWhereUniqueInput needs at least one of `id` arguments. Available options are marked with ?.
+[00:00:51.591] Browser ERROR   Failed to fetch course: 500 Failed to fetch course {"error":"Failed to fetch course","success":false}
+[00:00:51.591] Browser ERROR   Failed to fetch course: 500 Failed to fetch course {"error":"Failed to fetch course","success":false}
+[00:02:53.623] Server  LOG      Middleware Hit: "/course/cmhzzj76q000sqzb99vu9cjou"
+[00:02:53.626] Server  LOG      Cookie object: {}
+[00:02:53.627] Server  LOG      Extracted token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWkwMGk4cDgwMDAwMTBjZWF4N2k4cHFkIiwiZW1haWwiOiJhdmJoYXJhdGgxMjIxQGdtYWlsLmNvbSIsImlhdCI6MTc2MzE5NDU0MywiZXhwIjoxNzYzNzk5MzQzfQ.zAj4DX5uJj5XH1Xg3Es_sBTc7QazeUjAU1ABqjgfBmE"
+[00:02:53.632] Server  LOG      Token decoded: {}
+[00:02:53.633] Server  LOG      Token valid. User: "avbharath1221@gmail.com"
+[00:02:54.750] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:54.803] Server  LOG      Middleware Hit: "/icon.svg"
+[00:02:54.804] Server  LOG      Cookie object: {}
+[00:02:54.805] Server  LOG      Extracted token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWkwMGk4cDgwMDAwMTBjZWF4N2k4cHFkIiwiZW1haWwiOiJhdmJoYXJhdGgxMjIxQGdtYWlsLmNvbSIsImlhdCI6MTc2MzE5NDU0MywiZXhwIjoxNzYzNzk5MzQzfQ.zAj4DX5uJj5XH1Xg3Es_sBTc7QazeUjAU1ABqjgfBmE"
+[00:02:54.808] Server  LOG      Token decoded: {}
+[00:02:54.808] Server  LOG      Token valid. User: "avbharath1221@gmail.com"
+[00:02:54.833] Server  LOG      Middleware Hit: "/api/users/cmi00i8p8000010ceax7i8pqd/profile"
+[00:02:54.834] Server  LOG      Cookie object: {}
+[00:02:54.834] Server  LOG      Extracted token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWkwMGk4cDgwMDAwMTBjZWF4N2k4cHFkIiwiZW1haWwiOiJhdmJoYXJhdGgxMjIxQGdtYWlsLmNvbSIsImlhdCI6MTc2MzE5NDU0MywiZXhwIjoxNzYzNzk5MzQzfQ.zAj4DX5uJj5XH1Xg3Es_sBTc7QazeUjAU1ABqjgfBmE"
+[00:02:54.836] Server  LOG      Token decoded: {}
+[00:02:54.837] Server  LOG      Token valid. User: "avbharath1221@gmail.com"
+[00:02:54.843] Server  LOG      Middleware Hit: "/api/courses/cmhzzj76q000sqzb99vu9cjou"
+[00:02:54.845] Server  LOG     Public GET /api/courses route → allowing: "/api/courses/cmhzzj76q000sqzb99vu9cjou"
+[00:02:54.851] Server  LOG      Middleware Hit: "/icon-dark-32x32.png"
+[00:02:54.852] Server  LOG      Cookie object: {}
+[00:02:54.853] Server  LOG      Extracted token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWkwMGk4cDgwMDAwMTBjZWF4N2k4cHFkIiwiZW1haWwiOiJhdmJoYXJhdGgxMjIxQGdtYWlsLmNvbSIsImlhdCI6MTc2MzE5NDU0MywiZXhwIjoxNzYzNzk5MzQzfQ.zAj4DX5uJj5XH1Xg3Es_sBTc7QazeUjAU1ABqjgfBmE"
+[00:02:54.855] Server  LOG      Token decoded: {}
+[00:02:54.855] Server  LOG      Token valid. User: "avbharath1221@gmail.com"
+[00:02:55.076] Server  LOG     [api/courses/[id] GET] request.url= "http://localhost:3000/api/courses/cmhzzj76q000sqzb99vu9cjou"
+[00:02:55.083] Server  ERROR   C:\Users\avbha\OneDrive\Desktop\projects\educify\node_modules\next\dist\compiled\next-server\app-route-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:55.085] Server  ERROR   C:\Users\avbha\OneDrive\Desktop\projects\educify\node_modules\next\dist\client\lib\console.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:55.086] Server  ERROR   C:\Users\avbha\OneDrive\Desktop\projects\educify\node_modules\next\dist\server\node-environment-extensions\console-file.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:55.087] Server  ERROR   C:\Users\avbha\OneDrive\Desktop\projects\educify\node_modules\next\dist\server\node-environment-extensions\console-exit.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:55.092] Server  ERROR   C:\Users\avbha\OneDrive\Desktop\projects\educify\node_modules\next\dist\server\node-environment-extensions\console-dim.external.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:55.097] Server  ERROR   C:\Users\avbha\OneDrive\Desktop\projects\educify\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:55.101] Server  ERROR   C:\Users\avbha\OneDrive\Desktop\projects\educify\.next\dev\server\chunks\[root-of-the-server]__6a8f7fc1._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:55.102] Server  ERROR   C:\Users\avbha\OneDrive\Desktop\projects\educify\node_modules\next\dist\server\lib\trace\tracer.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:55.105] Server  WARN    Error: Route "/api/courses/[id]" used `...params` or similar expression. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:02:55.105] Server  LOG     [api/courses/[id] GET] params= {}
+[00:02:55.115] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:02:55.115] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/course/cmhzzj76q000sqzb99vu9cjou","route":"/course/[id]"}
+[00:02:55.115] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/course/cmhzzj76q000sqzb99vu9cjou color: rgb(120, 120, 120) color: inherit {"dp":"/course/[id]","o":"http://localhost:3000/course/cmhzzj76q000sqzb99vu9cjou","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763194676665}
+[00:02:55.116] Server  LOG     prisma:query "SELECT 1"
+[00:02:55.118] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"name\", \"public\".\"User\".\"avatar\", \"public\".\"User\".\"phone\", \"public\".\"User\".\"location\", \"public\".\"User\".\"bio\", \"public\".\"User\".\"joinDate\", \"public\".\"User\".\"role\"::text, \"public\".\"User\".\"isVerified\", \"public\".\"User\".\"emailNotifications\", \"public\".\"User\".\"marketingEmails\", \"public\".\"User\".\"courseRecommendations\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"id\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[00:02:55.120] Server  LOG     prisma:query "SELECT \"public\".\"Enrollment\".\"id\", \"public\".\"Enrollment\".\"userId\", \"public\".\"Enrollment\".\"courseId\", \"public\".\"Enrollment\".\"progress\", \"public\".\"Enrollment\".\"lastAccessed\", \"public\".\"Enrollment\".\"enrolledAt\", \"public\".\"Enrollment\".\"completedAt\", \"public\".\"Enrollment\".\"certificateUrl\", \"public\".\"Enrollment\".\"status\"::text, \"public\".\"Enrollment\".\"createdAt\", \"public\".\"Enrollment\".\"updatedAt\" FROM \"public\".\"Enrollment\" WHERE \"public\".\"Enrollment\".\"userId\" IN ($1) OFFSET $2"
+[00:02:55.145] Server  LOG      Middleware Hit: "/api/users/cmi00i8p8000010ceax7i8pqd/profile"
+[00:02:55.148] Server  LOG      Cookie object: {}
+[00:02:55.149] Server  LOG      Extracted token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWkwMGk4cDgwMDAwMTBjZWF4N2k4cHFkIiwiZW1haWwiOiJhdmJoYXJhdGgxMjIxQGdtYWlsLmNvbSIsImlhdCI6MTc2MzE5NDU0MywiZXhwIjoxNzYzNzk5MzQzfQ.zAj4DX5uJj5XH1Xg3Es_sBTc7QazeUjAU1ABqjgfBmE"
+[00:02:55.152] Server  LOG      Token decoded: {}
+[00:02:55.154] Server  LOG      Token valid. User: "avbharath1221@gmail.com"
+[00:02:55.218] Server  LOG     prisma:query "SELECT \"public\".\"Course\".\"id\", \"public\".\"Course\".\"title\", \"public\".\"Course\".\"description\", \"public\".\"Course\".\"thumbnail\", \"public\".\"Course\".\"price\", \"public\".\"Course\".\"category\"::text, \"public\".\"Course\".\"difficulty\"::text, \"public\".\"Course\".\"instructorId\", \"public\".\"Course\".\"rating\", \"public\".\"Course\".\"studentsEnrolled\", \"public\".\"Course\".\"duration\", \"public\".\"Course\".\"highlights\", \"public\".\"Course\".\"requirements\", \"public\".\"Course\".\"whatYouLearn\", \"public\".\"Course\".\"features\", \"public\".\"Course\".\"status\"::text, \"public\".\"Course\".\"createdAt\", \"public\".\"Course\".\"updatedAt\" FROM \"public\".\"Course\" WHERE (\"public\".\"Course\".\"id\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[00:02:55.231] Server  LOG     prisma:query "SELECT 1"
+[00:02:55.289] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"name\", \"public\".\"User\".\"avatar\", \"public\".\"User\".\"phone\", \"public\".\"User\".\"location\", \"public\".\"User\".\"bio\", \"public\".\"User\".\"joinDate\", \"public\".\"User\".\"role\"::text, \"public\".\"User\".\"isVerified\", \"public\".\"User\".\"emailNotifications\", \"public\".\"User\".\"marketingEmails\", \"public\".\"User\".\"courseRecommendations\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"id\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[00:02:55.324] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"name\", \"public\".\"User\".\"bio\", \"public\".\"User\".\"avatar\" FROM \"public\".\"User\" WHERE \"public\".\"User\".\"id\" IN ($1) OFFSET $2"
+[00:02:55.341] Server  LOG     prisma:query "SELECT \"public\".\"Enrollment\".\"id\", \"public\".\"Enrollment\".\"userId\", \"public\".\"Enrollment\".\"courseId\", \"public\".\"Enrollment\".\"progress\", \"public\".\"Enrollment\".\"lastAccessed\", \"public\".\"Enrollment\".\"enrolledAt\", \"public\".\"Enrollment\".\"completedAt\", \"public\".\"Enrollment\".\"certificateUrl\", \"public\".\"Enrollment\".\"status\"::text, \"public\".\"Enrollment\".\"createdAt\", \"public\".\"Enrollment\".\"updatedAt\" FROM \"public\".\"Enrollment\" WHERE \"public\".\"Enrollment\".\"userId\" IN ($1) OFFSET $2"
+[00:02:55.440] Server  LOG     prisma:query "SELECT \"public\".\"Module\".\"id\", \"public\".\"Module\".\"courseId\", \"public\".\"Module\".\"title\", \"public\".\"Module\".\"type\"::text, \"public\".\"Module\".\"url\", \"public\".\"Module\".\"fileName\", \"public\".\"Module\".\"duration\", \"public\".\"Module\".\"order\", \"public\".\"Module\".\"createdAt\" FROM \"public\".\"Module\" WHERE \"public\".\"Module\".\"courseId\" IN ($1) ORDER BY \"public\".\"Module\".\"order\" ASC OFFSET $2"
+[00:02:55.549] Server  LOG     prisma:query "SELECT \"public\".\"Lesson\".\"id\", \"public\".\"Lesson\".\"courseId\", \"public\".\"Lesson\".\"title\", \"public\".\"Lesson\".\"duration\", \"public\".\"Lesson\".\"order\", \"public\".\"Lesson\".\"content\", \"public\".\"Lesson\".\"moduleId\", \"public\".\"Lesson\".\"createdAt\" FROM \"public\".\"Lesson\" WHERE \"public\".\"Lesson\".\"courseId\" IN ($1) ORDER BY \"public\".\"Lesson\".\"order\" ASC OFFSET $2"
+[00:03:00.638] Server  LOG      Middleware Hit: "/api/courses/cmhzzj76q000sqzb99vu9cjou/enroll"
+[00:03:00.640] Server  LOG      Cookie object: {}
+[00:03:00.641] Server  LOG      Extracted token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWkwMGk4cDgwMDAwMTBjZWF4N2k4cHFkIiwiZW1haWwiOiJhdmJoYXJhdGgxMjIxQGdtYWlsLmNvbSIsImlhdCI6MTc2MzE5NDU0MywiZXhwIjoxNzYzNzk5MzQzfQ.zAj4DX5uJj5XH1Xg3Es_sBTc7QazeUjAU1ABqjgfBmE"
+[00:03:00.644] Server  LOG      Token decoded: {}
+[00:03:00.646] Server  LOG      Token valid. User: "avbharath1221@gmail.com"
+[00:03:02.269] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"name\", \"public\".\"User\".\"avatar\", \"public\".\"User\".\"phone\", \"public\".\"User\".\"location\", \"public\".\"User\".\"bio\", \"public\".\"User\".\"joinDate\", \"public\".\"User\".\"role\"::text, \"public\".\"User\".\"isVerified\", \"public\".\"User\".\"emailNotifications\", \"public\".\"User\".\"marketingEmails\", \"public\".\"User\".\"courseRecommendations\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"id\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[00:03:02.332] Server  LOG     prisma:query "SELECT \"public\".\"Course\".\"id\", \"public\".\"Course\".\"title\", \"public\".\"Course\".\"description\", \"public\".\"Course\".\"thumbnail\", \"public\".\"Course\".\"price\", \"public\".\"Course\".\"category\"::text, \"public\".\"Course\".\"difficulty\"::text, \"public\".\"Course\".\"instructorId\", \"public\".\"Course\".\"rating\", \"public\".\"Course\".\"studentsEnrolled\", \"public\".\"Course\".\"duration\", \"public\".\"Course\".\"highlights\", \"public\".\"Course\".\"requirements\", \"public\".\"Course\".\"whatYouLearn\", \"public\".\"Course\".\"features\", \"public\".\"Course\".\"status\"::text, \"public\".\"Course\".\"createdAt\", \"public\".\"Course\".\"updatedAt\" FROM \"public\".\"Course\" WHERE (\"public\".\"Course\".\"id\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[00:03:02.457] Server  LOG     prisma:query "SELECT \"public\".\"Enrollment\".\"id\", \"public\".\"Enrollment\".\"userId\", \"public\".\"Enrollment\".\"courseId\", \"public\".\"Enrollment\".\"progress\", \"public\".\"Enrollment\".\"lastAccessed\", \"public\".\"Enrollment\".\"enrolledAt\", \"public\".\"Enrollment\".\"completedAt\", \"public\".\"Enrollment\".\"certificateUrl\", \"public\".\"Enrollment\".\"status\"::text, \"public\".\"Enrollment\".\"createdAt\", \"public\".\"Enrollment\".\"updatedAt\" FROM \"public\".\"Enrollment\" WHERE ((\"public\".\"Enrollment\".\"userId\" = $1 AND \"public\".\"Enrollment\".\"courseId\" = $2) AND 1=1) LIMIT $3 OFFSET $4"
+[00:03:02.543] Server  LOG     prisma:query "BEGIN"
+[00:03:02.674] Server  LOG     prisma:query "INSERT INTO \"public\".\"Enrollment\" (\"id\",\"userId\",\"courseId\",\"progress\",\"lastAccessed\",\"enrolledAt\",\"status\",\"createdAt\",\"updatedAt\") VALUES ($1,$2,$3,$4,$5,$6,CAST($7::text AS \"public\".\"EnrollmentStatus\"),$8,$9) RETURNING \"public\".\"Enrollment\".\"id\""
+[00:03:02.776] Server  LOG     prisma:query "SELECT \"public\".\"Enrollment\".\"id\", \"public\".\"Enrollment\".\"userId\", \"public\".\"Enrollment\".\"courseId\", \"public\".\"Enrollment\".\"progress\", \"public\".\"Enrollment\".\"lastAccessed\", \"public\".\"Enrollment\".\"enrolledAt\", \"public\".\"Enrollment\".\"completedAt\", \"public\".\"Enrollment\".\"certificateUrl\", \"public\".\"Enrollment\".\"status\"::text, \"public\".\"Enrollment\".\"createdAt\", \"public\".\"Enrollment\".\"updatedAt\" FROM \"public\".\"Enrollment\" WHERE \"public\".\"Enrollment\".\"id\" = $1 LIMIT $2 OFFSET $3"
+[00:03:02.891] Server  LOG     prisma:query "SELECT \"public\".\"Course\".\"id\", \"public\".\"Course\".\"title\", \"public\".\"Course\".\"instructorId\", \"public\".\"Course\".\"category\"::text, \"public\".\"Course\".\"difficulty\"::text, \"public\".\"Course\".\"duration\", \"public\".\"Course\".\"thumbnail\", \"public\".\"Course\".\"price\" FROM \"public\".\"Course\" WHERE \"public\".\"Course\".\"id\" IN ($1) OFFSET $2"
+[00:03:02.997] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"name\", \"public\".\"User\".\"avatar\", \"public\".\"User\".\"phone\", \"public\".\"User\".\"location\", \"public\".\"User\".\"bio\", \"public\".\"User\".\"joinDate\", \"public\".\"User\".\"role\"::text, \"public\".\"User\".\"isVerified\", \"public\".\"User\".\"emailNotifications\", \"public\".\"User\".\"marketingEmails\", \"public\".\"User\".\"courseRecommendations\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE \"public\".\"User\".\"id\" IN ($1) OFFSET $2"
+[00:03:03.065] Server  LOG     prisma:query "COMMIT"
+[00:03:03.218] Server  LOG     prisma:query "UPDATE \"public\".\"Course\" SET \"studentsEnrolled\" = (\"public\".\"Course\".\"studentsEnrolled\" + $1), \"updatedAt\" = $2 WHERE (\"public\".\"Course\".\"id\" = $3 AND 1=1) RETURNING \"public\".\"Course\".\"id\", \"public\".\"Course\".\"title\", \"public\".\"Course\".\"description\", \"public\".\"Course\".\"thumbnail\", \"public\".\"Course\".\"price\", \"public\".\"Course\".\"category\"::text, \"public\".\"Course\".\"difficulty\"::text, \"public\".\"Course\".\"instructorId\", \"public\".\"Course\".\"rating\", \"public\".\"Course\".\"studentsEnrolled\", \"public\".\"Course\".\"duration\", \"public\".\"Course\".\"highlights\", \"public\".\"Course\".\"requirements\", \"public\".\"Course\".\"whatYouLearn\", \"public\".\"Course\".\"features\", \"public\".\"Course\".\"status\"::text, \"public\".\"Course\".\"createdAt\", \"public\".\"Course\".\"updatedAt\""
+[00:03:04.629] Server  LOG      Middleware Hit: "/dashboard"
+[00:03:04.631] Server  LOG      Cookie object: {}
+[00:03:04.631] Server  LOG      Extracted token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWkwMGk4cDgwMDAwMTBjZWF4N2k4cHFkIiwiZW1haWwiOiJhdmJoYXJhdGgxMjIxQGdtYWlsLmNvbSIsImlhdCI6MTc2MzE5NDU0MywiZXhwIjoxNzYzNzk5MzQzfQ.zAj4DX5uJj5XH1Xg3Es_sBTc7QazeUjAU1ABqjgfBmE"
+[00:03:04.633] Server  LOG      Token decoded: {}
+[00:03:04.634] Server  LOG      Token valid. User: "avbharath1221@gmail.com"
+[00:03:04.786] Server  LOG      Middleware Hit: "/api/users/cmi00i8p8000010ceax7i8pqd/profile"
+[00:03:04.787] Server  LOG      Cookie object: {}
+[00:03:04.788] Server  LOG      Extracted token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWkwMGk4cDgwMDAwMTBjZWF4N2k4cHFkIiwiZW1haWwiOiJhdmJoYXJhdGgxMjIxQGdtYWlsLmNvbSIsImlhdCI6MTc2MzE5NDU0MywiZXhwIjoxNzYzNzk5MzQzfQ.zAj4DX5uJj5XH1Xg3Es_sBTc7QazeUjAU1ABqjgfBmE"
+[00:03:04.791] Server  LOG      Token decoded: {}
+[00:03:04.792] Server  LOG      Token valid. User: "avbharath1221@gmail.com"
+[00:03:04.876] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3000/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763194686593}
+[00:03:04.891] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"name\", \"public\".\"User\".\"avatar\", \"public\".\"User\".\"phone\", \"public\".\"User\".\"location\", \"public\".\"User\".\"bio\", \"public\".\"User\".\"joinDate\", \"public\".\"User\".\"role\"::text, \"public\".\"User\".\"isVerified\", \"public\".\"User\".\"emailNotifications\", \"public\".\"User\".\"marketingEmails\", \"public\".\"User\".\"courseRecommendations\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"id\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[00:03:04.945] Server  LOG     prisma:query "SELECT \"public\".\"Enrollment\".\"id\", \"public\".\"Enrollment\".\"userId\", \"public\".\"Enrollment\".\"courseId\", \"public\".\"Enrollment\".\"progress\", \"public\".\"Enrollment\".\"lastAccessed\", \"public\".\"Enrollment\".\"enrolledAt\", \"public\".\"Enrollment\".\"completedAt\", \"public\".\"Enrollment\".\"certificateUrl\", \"public\".\"Enrollment\".\"status\"::text, \"public\".\"Enrollment\".\"createdAt\", \"public\".\"Enrollment\".\"updatedAt\" FROM \"public\".\"Enrollment\" WHERE \"public\".\"Enrollment\".\"userId\" IN ($1) OFFSET $2"
+[00:03:04.961] Server  LOG      Middleware Hit: "/api/users/cmi00i8p8000010ceax7i8pqd/profile"
+[00:03:04.963] Server  LOG      Cookie object: {}
+[00:03:04.964] Server  LOG      Extracted token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWkwMGk4cDgwMDAwMTBjZWF4N2k4cHFkIiwiZW1haWwiOiJhdmJoYXJhdGgxMjIxQGdtYWlsLmNvbSIsImlhdCI6MTc2MzE5NDU0MywiZXhwIjoxNzYzNzk5MzQzfQ.zAj4DX5uJj5XH1Xg3Es_sBTc7QazeUjAU1ABqjgfBmE"
+[00:03:04.969] Server  LOG      Token decoded: {}
+[00:03:04.973] Server  LOG      Token valid. User: "avbharath1221@gmail.com"
+[00:03:05.066] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"name\", \"public\".\"User\".\"avatar\", \"public\".\"User\".\"phone\", \"public\".\"User\".\"location\", \"public\".\"User\".\"bio\", \"public\".\"User\".\"joinDate\", \"public\".\"User\".\"role\"::text, \"public\".\"User\".\"isVerified\", \"public\".\"User\".\"emailNotifications\", \"public\".\"User\".\"marketingEmails\", \"public\".\"User\".\"courseRecommendations\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"id\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[00:03:05.117] Server  LOG     prisma:query "SELECT \"public\".\"Enrollment\".\"id\", \"public\".\"Enrollment\".\"userId\", \"public\".\"Enrollment\".\"courseId\", \"public\".\"Enrollment\".\"progress\", \"public\".\"Enrollment\".\"lastAccessed\", \"public\".\"Enrollment\".\"enrolledAt\", \"public\".\"Enrollment\".\"completedAt\", \"public\".\"Enrollment\".\"certificateUrl\", \"public\".\"Enrollment\".\"status\"::text, \"public\".\"Enrollment\".\"createdAt\", \"public\".\"Enrollment\".\"updatedAt\" FROM \"public\".\"Enrollment\" WHERE \"public\".\"Enrollment\".\"userId\" IN ($1) OFFSET $2"
+[00:03:05.150] Server  LOG      Middleware Hit: "/api/users/cmi00i8p8000010ceax7i8pqd/profile"
+[00:03:05.151] Server  LOG      Cookie object: {}
+[00:03:05.152] Server  LOG      Extracted token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWkwMGk4cDgwMDAwMTBjZWF4N2k4cHFkIiwiZW1haWwiOiJhdmJoYXJhdGgxMjIxQGdtYWlsLmNvbSIsImlhdCI6MTc2MzE5NDU0MywiZXhwIjoxNzYzNzk5MzQzfQ.zAj4DX5uJj5XH1Xg3Es_sBTc7QazeUjAU1ABqjgfBmE"
+[00:03:05.157] Server  LOG      Token decoded: {}
+[00:03:05.158] Server  LOG      Token valid. User: "avbharath1221@gmail.com"
+[00:03:05.256] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"name\", \"public\".\"User\".\"avatar\", \"public\".\"User\".\"phone\", \"public\".\"User\".\"location\", \"public\".\"User\".\"bio\", \"public\".\"User\".\"joinDate\", \"public\".\"User\".\"role\"::text, \"public\".\"User\".\"isVerified\", \"public\".\"User\".\"emailNotifications\", \"public\".\"User\".\"marketingEmails\", \"public\".\"User\".\"courseRecommendations\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"id\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[00:03:05.306] Server  LOG     prisma:query "SELECT \"public\".\"Enrollment\".\"id\", \"public\".\"Enrollment\".\"userId\", \"public\".\"Enrollment\".\"courseId\", \"public\".\"Enrollment\".\"progress\", \"public\".\"Enrollment\".\"lastAccessed\", \"public\".\"Enrollment\".\"enrolledAt\", \"public\".\"Enrollment\".\"completedAt\", \"public\".\"Enrollment\".\"certificateUrl\", \"public\".\"Enrollment\".\"status\"::text, \"public\".\"Enrollment\".\"createdAt\", \"public\".\"Enrollment\".\"updatedAt\" FROM \"public\".\"Enrollment\" WHERE \"public\".\"Enrollment\".\"userId\" IN ($1) OFFSET $2"
+[00:03:05.319] Server  LOG      Middleware Hit: "/api/users/cmi00i8p8000010ceax7i8pqd/profile"
+[00:03:05.320] Server  LOG      Cookie object: {}
+[00:03:05.321] Server  LOG      Extracted token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWkwMGk4cDgwMDAwMTBjZWF4N2k4cHFkIiwiZW1haWwiOiJhdmJoYXJhdGgxMjIxQGdtYWlsLmNvbSIsImlhdCI6MTc2MzE5NDU0MywiZXhwIjoxNzYzNzk5MzQzfQ.zAj4DX5uJj5XH1Xg3Es_sBTc7QazeUjAU1ABqjgfBmE"
+[00:03:05.325] Server  LOG      Token decoded: {}
+[00:03:05.326] Server  LOG      Token valid. User: "avbharath1221@gmail.com"
+[00:03:05.342] Server  LOG      Middleware Hit: "/api/users/cmi00i8p8000010ceax7i8pqd/dashboard"
+[00:03:05.343] Server  LOG      Cookie object: {}
+[00:03:05.345] Server  LOG      Extracted token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWkwMGk4cDgwMDAwMTBjZWF4N2k4cHFkIiwiZW1haWwiOiJhdmJoYXJhdGgxMjIxQGdtYWlsLmNvbSIsImlhdCI6MTc2MzE5NDU0MywiZXhwIjoxNzYzNzk5MzQzfQ.zAj4DX5uJj5XH1Xg3Es_sBTc7QazeUjAU1ABqjgfBmE"
+[00:03:05.347] Server  LOG      Token decoded: {}
+[00:03:05.348] Server  LOG      Token valid. User: "avbharath1221@gmail.com"
+[00:03:05.420] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"name\", \"public\".\"User\".\"avatar\", \"public\".\"User\".\"phone\", \"public\".\"User\".\"location\", \"public\".\"User\".\"bio\", \"public\".\"User\".\"joinDate\", \"public\".\"User\".\"role\"::text, \"public\".\"User\".\"isVerified\", \"public\".\"User\".\"emailNotifications\", \"public\".\"User\".\"marketingEmails\", \"public\".\"User\".\"courseRecommendations\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"id\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[00:03:05.471] Server  LOG     prisma:query "SELECT \"public\".\"Enrollment\".\"id\", \"public\".\"Enrollment\".\"userId\", \"public\".\"Enrollment\".\"courseId\", \"public\".\"Enrollment\".\"progress\", \"public\".\"Enrollment\".\"lastAccessed\", \"public\".\"Enrollment\".\"enrolledAt\", \"public\".\"Enrollment\".\"completedAt\", \"public\".\"Enrollment\".\"certificateUrl\", \"public\".\"Enrollment\".\"status\"::text, \"public\".\"Enrollment\".\"createdAt\", \"public\".\"Enrollment\".\"updatedAt\" FROM \"public\".\"Enrollment\" WHERE \"public\".\"Enrollment\".\"userId\" IN ($1) OFFSET $2"
+[00:03:05.481] Server  LOG      Middleware Hit: "/api/users/cmi00i8p8000010ceax7i8pqd/profile"
+[00:03:05.482] Server  LOG      Cookie object: {}
+[00:03:05.483] Server  LOG      Extracted token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWkwMGk4cDgwMDAwMTBjZWF4N2k4cHFkIiwiZW1haWwiOiJhdmJoYXJhdGgxMjIxQGdtYWlsLmNvbSIsImlhdCI6MTc2MzE5NDU0MywiZXhwIjoxNzYzNzk5MzQzfQ.zAj4DX5uJj5XH1Xg3Es_sBTc7QazeUjAU1ABqjgfBmE"
+[00:03:05.485] Server  LOG      Token decoded: {}
+[00:03:05.486] Server  LOG      Token valid. User: "avbharath1221@gmail.com"
+[00:03:05.540] Server  LOG     prisma:query "SELECT \"public\".\"Enrollment\".\"id\", \"public\".\"Enrollment\".\"userId\", \"public\".\"Enrollment\".\"courseId\", \"public\".\"Enrollment\".\"progress\", \"public\".\"Enrollment\".\"lastAccessed\", \"public\".\"Enrollment\".\"enrolledAt\", \"public\".\"Enrollment\".\"completedAt\", \"public\".\"Enrollment\".\"certificateUrl\", \"public\".\"Enrollment\".\"status\"::text, \"public\".\"Enrollment\".\"createdAt\", \"public\".\"Enrollment\".\"updatedAt\" FROM \"public\".\"Enrollment\" WHERE \"public\".\"Enrollment\".\"userId\" = $1 ORDER BY \"public\".\"Enrollment\".\"lastAccessed\" DESC LIMIT $2 OFFSET $3"
+[00:03:05.555] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"name\", \"public\".\"User\".\"avatar\", \"public\".\"User\".\"phone\", \"public\".\"User\".\"location\", \"public\".\"User\".\"bio\", \"public\".\"User\".\"joinDate\", \"public\".\"User\".\"role\"::text, \"public\".\"User\".\"isVerified\", \"public\".\"User\".\"emailNotifications\", \"public\".\"User\".\"marketingEmails\", \"public\".\"User\".\"courseRecommendations\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"id\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[00:03:05.607] Server  LOG     prisma:query "SELECT \"public\".\"Enrollment\".\"id\", \"public\".\"Enrollment\".\"userId\", \"public\".\"Enrollment\".\"courseId\", \"public\".\"Enrollment\".\"progress\", \"public\".\"Enrollment\".\"lastAccessed\", \"public\".\"Enrollment\".\"enrolledAt\", \"public\".\"Enrollment\".\"completedAt\", \"public\".\"Enrollment\".\"certificateUrl\", \"public\".\"Enrollment\".\"status\"::text, \"public\".\"Enrollment\".\"createdAt\", \"public\".\"Enrollment\".\"updatedAt\" FROM \"public\".\"Enrollment\" WHERE \"public\".\"Enrollment\".\"userId\" IN ($1) OFFSET $2"
+[00:03:05.622] Server  LOG      Middleware Hit: "/api/users/cmi00i8p8000010ceax7i8pqd/profile"
+[00:03:05.623] Server  LOG      Cookie object: {}
+[00:03:05.625] Server  LOG      Extracted token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWkwMGk4cDgwMDAwMTBjZWF4N2k4cHFkIiwiZW1haWwiOiJhdmJoYXJhdGgxMjIxQGdtYWlsLmNvbSIsImlhdCI6MTc2MzE5NDU0MywiZXhwIjoxNzYzNzk5MzQzfQ.zAj4DX5uJj5XH1Xg3Es_sBTc7QazeUjAU1ABqjgfBmE"
+[00:03:05.628] Server  LOG      Token decoded: {}
+[00:03:05.628] Server  LOG      Token valid. User: "avbharath1221@gmail.com"
+[00:03:05.646] Server  LOG     prisma:query "SELECT \"public\".\"Course\".\"id\", \"public\".\"Course\".\"title\", \"public\".\"Course\".\"description\", \"public\".\"Course\".\"thumbnail\", \"public\".\"Course\".\"price\", \"public\".\"Course\".\"category\"::text, \"public\".\"Course\".\"difficulty\"::text, \"public\".\"Course\".\"instructorId\", \"public\".\"Course\".\"rating\", \"public\".\"Course\".\"studentsEnrolled\", \"public\".\"Course\".\"duration\", \"public\".\"Course\".\"highlights\", \"public\".\"Course\".\"requirements\", \"public\".\"Course\".\"whatYouLearn\", \"public\".\"Course\".\"features\", \"public\".\"Course\".\"status\"::text, \"public\".\"Course\".\"createdAt\", \"public\".\"Course\".\"updatedAt\" FROM \"public\".\"Course\" WHERE \"public\".\"Course\".\"id\" IN ($1) OFFSET $2"
+[00:03:05.701] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"name\", \"public\".\"User\".\"avatar\", \"public\".\"User\".\"phone\", \"public\".\"User\".\"location\", \"public\".\"User\".\"bio\", \"public\".\"User\".\"joinDate\", \"public\".\"User\".\"role\"::text, \"public\".\"User\".\"isVerified\", \"public\".\"User\".\"emailNotifications\", \"public\".\"User\".\"marketingEmails\", \"public\".\"User\".\"courseRecommendations\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"id\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[00:03:05.746] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"name\" FROM \"public\".\"User\" WHERE \"public\".\"User\".\"id\" IN ($1) OFFSET $2"
+[00:03:05.750] Server  LOG     prisma:query "SELECT \"public\".\"Enrollment\".\"id\", \"public\".\"Enrollment\".\"userId\", \"public\".\"Enrollment\".\"courseId\", \"public\".\"Enrollment\".\"progress\", \"public\".\"Enrollment\".\"lastAccessed\", \"public\".\"Enrollment\".\"enrolledAt\", \"public\".\"Enrollment\".\"completedAt\", \"public\".\"Enrollment\".\"certificateUrl\", \"public\".\"Enrollment\".\"status\"::text, \"public\".\"Enrollment\".\"createdAt\", \"public\".\"Enrollment\".\"updatedAt\" FROM \"public\".\"Enrollment\" WHERE \"public\".\"Enrollment\".\"userId\" IN ($1) OFFSET $2"
+[00:03:05.856] Server  LOG     prisma:query "SELECT \"public\".\"Course\".\"id\", \"public\".\"Course\".\"title\", \"public\".\"Course\".\"description\", \"public\".\"Course\".\"thumbnail\", \"public\".\"Course\".\"price\", \"public\".\"Course\".\"category\"::text, \"public\".\"Course\".\"difficulty\"::text, \"public\".\"Course\".\"instructorId\", \"public\".\"Course\".\"rating\", \"public\".\"Course\".\"studentsEnrolled\", \"public\".\"Course\".\"duration\", \"public\".\"Course\".\"highlights\", \"public\".\"Course\".\"requirements\", \"public\".\"Course\".\"whatYouLearn\", \"public\".\"Course\".\"features\", \"public\".\"Course\".\"status\"::text, \"public\".\"Course\".\"createdAt\", \"public\".\"Course\".\"updatedAt\" FROM \"public\".\"Course\" WHERE (\"public\".\"Course\".\"status\" = CAST($1::text AS \"public\".\"CourseStatus\") AND (\"public\".\"Course\".\"id\") NOT IN (SELECT \"t1\".\"courseId\" FROM \"public\".\"Enrollment\" AS \"t1\" WHERE (\"t1\".\"userId\" = $2 AND \"t1\".\"courseId\" IS NOT NULL))) ORDER BY \"public\".\"Course\".\"id\" ASC LIMIT $3 OFFSET $4"
+[00:03:05.910] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"name\" FROM \"public\".\"User\" WHERE \"public\".\"User\".\"id\" IN ($1) OFFSET $2"
