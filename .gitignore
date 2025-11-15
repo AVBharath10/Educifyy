@@ -1,1 +1,67 @@
+# Dependencies
 node_modules/
+/.pnp
+.pnp.js
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+.env.production.local
+.env.development.local
+.env.test.local
+
+# Next.js build and cache
+.next/
+out/
+build/
+dist/
+.turbo/
+.swc
+
+# Prisma
+prisma/dev.db
+prisma/dev.db-shm
+prisma/dev.db-wal
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+pnpm-debug.log*
+
+# Testing
+coverage/
+.nyc_output/
+
+# Miscellaneous
+.cache/
+.eslintcache
+
+# Optional npm cache directory
+.npm
+
+# Optional REPL history
+.node_repl_history
