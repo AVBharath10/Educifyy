@@ -218,6 +218,7 @@ export interface CreateCourseData {
   highlights?: string[];
   requirements?: string[];
   whatYouLearn?: string[];
+  thumbnail?: string;
 }
 
 export const courseApi = {
@@ -273,9 +274,22 @@ export const courseApi = {
       method: "POST",
       body: JSON.stringify(data),
     }),
+
+  updateModule: (moduleId: string, data: any) =>
+    apiFetch(`/modules/${moduleId}`, {
+      method: "PUT",
+      body: JSON.stringify(data),
+    }),
+
+  deleteModule: (moduleId: string) =>
+    apiFetch(`/modules/${moduleId}`, {
+      method: "DELETE",
+    }),
+
   enrollCourse: (courseId: string) =>
     apiFetch(`/courses/${courseId}/enroll`, {
       method: "POST",
+      body: JSON.stringify({ courseId }), // Ensure body is sent if needed, though previously it might have been empty
     }).then((res) => {
       try {
         if (typeof window !== "undefined") {
@@ -317,6 +331,12 @@ export const enrollmentApi = {
 
   getUserEnrollments: (userId: string) =>
     apiFetch<Enrollment[]>(`/users/${userId}/enrollments`),
+
+  updateProgress: (courseId: string, lessonId: string) =>
+    apiFetch<{ progress: number }>(`/enrollments/${courseId}/progress`, {
+      method: "POST",
+      body: JSON.stringify({ lessonId }),
+    }),
 };
 
 // ============================================================================
@@ -470,7 +490,7 @@ export interface PresignedUrlResponse {
 }
 
 export const uploadApi = {
-  uploadFile: (file: File, type: "thumbnail" | "video" | "document") =>
+  uploadFile: (file: File, type: "thumbnail" | "video" | "document" | "text") =>
     uploadFile("/upload", file, { type }),
 
   getPresignedUrl: (fileName: string, fileType: string, type: string) =>

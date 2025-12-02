@@ -8,6 +8,8 @@ interface AnimatedButtonProps {
   className?: string
   variant?: 'primary' | 'secondary' | 'outline'
   size?: 'sm' | 'md' | 'lg'
+  type?: 'button' | 'submit' | 'reset'
+  disabled?: boolean
 }
 
 export function AnimatedButton({
@@ -16,8 +18,10 @@ export function AnimatedButton({
   className = '',
   variant = 'primary',
   size = 'md',
+  type = 'button',
+  disabled = false,
 }: AnimatedButtonProps) {
-  const baseStyles = 'font-semibold rounded-lg transition-all duration-300 hover-glow border'
+  const baseStyles = 'font-semibold rounded-lg transition-all duration-300 hover-glow border disabled:opacity-50 disabled:cursor-not-allowed'
 
   const variants = {
     primary: 'bg-linear-to-r from-violet-600 to-indigo-600 text-white border-transparent hover:from-violet-500 hover:to-indigo-500 shadow-lg shadow-indigo-500/20',
@@ -33,6 +37,8 @@ export function AnimatedButton({
 
   return (
     <button
+      type={type}
+      disabled={disabled}
       onClick={onClick}
       className={`${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`}
     >

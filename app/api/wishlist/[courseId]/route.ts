@@ -66,10 +66,8 @@ export async function DELETE(
 
     await prisma.wishlist.deleteMany({
       where: {
-        userId_courseId: {
-          userId,
-          courseId,
-        },
+        userId,
+        courseId,
       },
     });
 

@@ -42,17 +42,17 @@ export default function HomePage() {
         <div className="max-w-5xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center gap-2 mb-8 px-4 py-1.5 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-sm animate-fade-in-up">
             <Sparkles size={14} className="text-primary" />
-            <span className="text-sm font-medium text-primary">The Future of Education is Here</span>
+            <span className="text-sm font-medium text-primary">Welcome to Educify</span>
           </div>
 
           <h1 className="text-6xl md:text-8xl font-bold mb-8 text-balance leading-tight tracking-tight animate-fade-in-up delay-100">
-            Master <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-purple-400 to-accent">Any Skill</span>
+            Learn <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-purple-400 to-accent">New Skills</span>
             <br />
-            <span className="text-foreground">Unleash Potential</span>
+            <span className="text-foreground">Share Knowledge</span>
           </h1>
 
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto text-balance leading-relaxed animate-fade-in-up delay-200">
-            Join the world's most advanced learning ecosystem. Connect with expert mentors, access premium content, and accelerate your career growth.
+            A simple platform to learn from others and share what you know.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-20 animate-fade-in-up delay-300">
@@ -74,41 +74,41 @@ export default function HomePage() {
       </section>
       <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-border">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">Why Choose Educify?</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">Features</h2>
           <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Experience a revolutionary learning platform designed for modern educators and students
+            Everything you need to learn and teach effectively.
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
                 icon: Zap,
-                title: 'Lightning Fast',
-                description: 'Modern infrastructure ensures smooth streaming and instant content delivery.',
+                title: 'Fast & Reliable',
+                description: 'Smooth video playback and quick loading times.',
               },
               {
                 icon: Users,
-                title: 'Community Driven',
-                description: 'Connect with thousands of learners and educators from around the world.',
+                title: 'Community',
+                description: 'Connect with other learners and instructors.',
               },
               {
                 icon: Rocket,
-                title: 'Advanced Tools',
-                description: 'Upload videos, documents, and multimedia with our intuitive course builder.',
+                title: 'Easy Uploads',
+                description: 'Simple tools to create and manage your courses.',
               },
               {
                 icon: TrendingUp,
-                title: 'Progress Tracking',
-                description: 'Monitor your learning journey with detailed analytics and achievements.',
+                title: 'Track Progress',
+                description: "Keep track of courses you've completed.",
               },
               {
                 icon: Sparkles,
-                title: 'Personalized',
-                description: 'Intelligent recommendations based on your learning history and preferences.',
+                title: 'For You',
+                description: 'Find courses that match your interests.',
               },
               {
                 icon: Users,
-                title: 'Expert Support',
-                description: 'Get help from instructors and community members whenever you need it.',
+                title: 'Support',
+                description: 'Get help when you need it.',
               },
             ].map((feature, index) => {
               const Icon = feature.icon
@@ -130,9 +130,9 @@ export default function HomePage() {
       </section>
       <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-border">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Start Learning?</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Start Learning Today</h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Join thousands of students and instructors already transforming their education on Educify.
+            Join others who are learning on Educify.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/catalog">

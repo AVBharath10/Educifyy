@@ -34,6 +34,11 @@ model User {
   marketingEmails     Boolean             @default(false)
   courseRecommendations Boolean           @default(true)
   
+  // Stats
+  totalLearningMinutes Int            @default(0)
+  currentStreak       Int             @default(0)
+  lastActiveDate      DateTime?
+
   createdAt           DateTime            @default(now())
   updatedAt           DateTime            @updatedAt
 
@@ -158,6 +163,7 @@ model Enrollment {
   course              Course              @relation(fields: [courseId], references: [id], onDelete: Cascade)
   
   progress            Int                 @default(0)
+  completedLessonIds  String[]            @default([])
   lastAccessed        DateTime?
   enrolledAt          DateTime            @default(now())
   completedAt         DateTime?

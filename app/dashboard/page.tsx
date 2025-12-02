@@ -167,6 +167,34 @@ export default function DashboardPage() {
           </div>
         </div>
 
+        {/* Stats Section */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+          <StatCard
+            icon={<BookOpen size={24} className="text-blue-400" />}
+            label="Active Courses"
+            value={stats.activeCourses}
+            bg="bg-blue-500/10"
+          />
+          <StatCard
+            icon={<Clock size={24} className="text-purple-400" />}
+            label="Total Hours"
+            value={stats.totalHours}
+            bg="bg-purple-500/10"
+          />
+          <StatCard
+            icon={<CheckCircle size={24} className="text-green-400" />}
+            label="Completed"
+            value={stats.completedCourses}
+            bg="bg-green-500/10"
+          />
+          <StatCard
+            icon={<TrendingUp size={24} className="text-orange-400" />}
+            label="Current Streak"
+            value={`${stats.currentStreak} Days`}
+            bg="bg-orange-500/10"
+          />
+        </div>
+
         {activeTab === 'learning' ? (
           <>
             {/* Enrolled Courses Section */}
@@ -290,6 +318,7 @@ export default function DashboardPage() {
                   <CourseCard
                     key={course.id}
                     {...course}
+                    onEdit={(id) => window.location.href = `/course/${id}/edit`}
                     onDelete={async (id) => {
                       try {
                         await import('@/lib/api').then(m => m.courseApi.deleteCourse(id))

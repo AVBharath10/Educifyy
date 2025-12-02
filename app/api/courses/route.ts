@@ -132,6 +132,7 @@ export async function POST(request: NextRequest) {
         highlights: highlights || [],
         requirements: requirements || [],
         whatYouLearn: whatYouLearn || [],
+        thumbnail: validation.data.thumbnail,
         status: (validation.data.status as any) || "DRAFT",
       },
       include: {

@@ -245,12 +245,21 @@ async function GET(request, context// FIXED
                 }
             }
         });
+        const user = await __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].user.findUnique({
+            where: {
+                id: profileId
+            },
+            select: {
+                totalLearningMinutes: true,
+                currentStreak: true
+            }
+        });
         const formatted = {
             stats: {
                 activeCourses,
-                totalHours: 145,
+                totalHours: Math.round((user?.totalLearningMinutes || 0) / 60),
                 completedCourses,
-                currentStreak: 12
+                currentStreak: user?.currentStreak || 0
             },
             enrolledCourses: enrollments.map((e)=>({
                     id: e.id,

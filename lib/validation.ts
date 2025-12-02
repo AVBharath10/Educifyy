@@ -25,7 +25,7 @@ export const LoginSchema = z.object({
 // Course Schemas
 export const CreateCourseSchema = z.object({
   title: z.string().min(5, "Title must be at least 5 characters").max(200),
-  description: z.string().min(20, "Description must be at least 20 characters").max(5000),
+  description: z.string().min(1, "Description is required").max(5000),
   category: z.enum([
     "WEB_DEVELOPMENT",
     "DATA_SCIENCE",
@@ -42,6 +42,7 @@ export const CreateCourseSchema = z.object({
   highlights: z.array(z.string()).optional(),
   requirements: z.array(z.string()).optional(),
   whatYouLearn: z.array(z.string()).optional(),
+  thumbnail: z.string().optional(),
   status: z.enum(["DRAFT", "PUBLISHED", "ARCHIVED"]).optional(),
 });
 
@@ -49,9 +50,10 @@ export const UpdateCourseSchema = CreateCourseSchema.partial();
 
 export const AddModuleSchema = z.object({
   title: z.string().min(1, "Module title is required"),
-  type: z.enum(["VIDEO", "DOCUMENT"]),
+  type: z.enum(["VIDEO", "DOCUMENT", "TEXT"]),
   fileName: z.string().min(1),
-  url: z.string().min(1, "URL is required"),
+  url: z.string().optional(),
+  content: z.string().optional(),
   duration: z.string().optional(),
   order: z.number().int().min(0),
 });

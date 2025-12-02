@@ -102,11 +102,7 @@ export default function UploadCoursePage() {
       return
     }
 
-    if (formData.description.length < 20) {
-      setStatusMessage('Error: Description must be at least 20 characters')
-      setIsSubmitting(false)
-      return
-    }
+    // Description length check removed as per user request
 
     try {
       // 1. Upload Thumbnail

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { useParams, useRouter } from 'next/navigation'
-import { courseApi } from '@/lib/api'
+import { courseApi, enrollmentApi } from '@/lib/api'
 import { VideoPlayer } from '@/components/video-player'
 import { Loader2, FileText, CheckCircle, ChevronRight, AlertCircle } from 'lucide-react'
 import { AnimatedButton } from '@/components/animated-button'
@@ -52,22 +52,25 @@ export default function LessonPage() {
     }, [courseId, lessonId])
 
     const handleComplete = async () => {
-        // In a real app, call API to mark as complete
-        setIsCompleted(true)
+        try {
+            await enrollmentApi.updateProgress(courseId, lessonId)
+            setIsCompleted(true)
 
-        // Find next lesson
-        if (course && course.modules) {
-            const currentIndex = course.modules.findIndex((m: any) => m.id === lessonId)
-            const nextLesson = course.modules[currentIndex + 1]
+            // Find next lesson
+            if (course && course.modules) {
+                const currentIndex = course.modules.findIndex((m: any) => m.id === lessonId)
+                const nextLesson = course.modules[currentIndex + 1]
 
-            if (nextLesson) {
-                router.push(`/learn/${courseId}/${nextLesson.id}`)
-            } else {
-                // Course completed!
-                // Could show a celebration modal here
-                alert('Course Completed! Congratulations!')
-                router.push('/dashboard')
+                if (nextLesson) {
+                    router.push(`/learn/${courseId}/${nextLesson.id}`)
+                } else {
+                    // Course completed!
+                    alert('Course Completed! Congratulations!')
+                    router.push('/dashboard')
+                }
             }
+        } catch (err) {
+            console.error('Failed to update progress:', err)
         }
     }
 
@@ -147,7 +150,7 @@ export default function LessonPage() {
                 <div className="flex gap-4">
                     <AnimatedButton
                         onClick={handleComplete}
-                        variant={isCompleted ? "outline" : "default"}
+                        variant={isCompleted ? "outline" : "primary"}
                         className={isCompleted ? "border-green-500 text-green-600 hover:bg-green-50" : ""}
                     >
                         {isCompleted ? (

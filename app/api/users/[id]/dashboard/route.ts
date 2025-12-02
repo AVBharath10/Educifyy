@@ -45,12 +45,17 @@ export async function GET(
       },
     });
 
+    const user = await prisma.user.findUnique({
+      where: { id: profileId },
+      select: { totalLearningMinutes: true, currentStreak: true }
+    });
+
     const formatted = {
       stats: {
         activeCourses,
-        totalHours: 145, // TODO: replace with real hours later
+        totalHours: Math.round((user?.totalLearningMinutes || 0) / 60),
         completedCourses,
-        currentStreak: 12, // TODO: replace with real streak later
+        currentStreak: user?.currentStreak || 0,
       },
       enrolledCourses: enrollments.map((e) => ({
         id: e.id,

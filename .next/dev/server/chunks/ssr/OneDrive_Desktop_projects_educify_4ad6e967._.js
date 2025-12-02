@@ -150,8 +150,18 @@ const courseApi = {
             method: "POST",
             body: JSON.stringify(data)
         }),
+    updateModule: (moduleId, data)=>apiFetch(`/modules/${moduleId}`, {
+            method: "PUT",
+            body: JSON.stringify(data)
+        }),
+    deleteModule: (moduleId)=>apiFetch(`/modules/${moduleId}`, {
+            method: "DELETE"
+        }),
     enrollCourse: (courseId)=>apiFetch(`/courses/${courseId}/enroll`, {
-            method: "POST"
+            method: "POST",
+            body: JSON.stringify({
+                courseId
+            })
         }).then((res)=>{
             try {
                 if ("TURBOPACK compile-time falsy", 0) //TURBOPACK unreachable
@@ -170,7 +180,13 @@ const enrollmentApi = {
             })
         }),
     checkEnrollment: (courseId)=>apiFetch(`/enrollments/${courseId}`),
-    getUserEnrollments: (userId)=>apiFetch(`/users/${userId}/enrollments`)
+    getUserEnrollments: (userId)=>apiFetch(`/users/${userId}/enrollments`),
+    updateProgress: (courseId, lessonId)=>apiFetch(`/enrollments/${courseId}/progress`, {
+            method: "POST",
+            body: JSON.stringify({
+                lessonId
+            })
+        })
 };
 const wishlistApi = {
     getWishlist: ()=>apiFetch("/wishlist"),
