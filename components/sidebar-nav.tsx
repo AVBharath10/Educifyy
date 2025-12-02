@@ -40,14 +40,15 @@ export function SidebarNav() {
 
       {/* Sidebar */}
       <aside
-        className={`fixed left-0 top-0 h-screen w-64 bg-sidebar border-r border-border transform transition-transform md:translate-x-0 z-40 ${
-          isOpen ? 'translate-x-0' : '-translate-x-full'
-        }`}
+        className={`fixed left-0 top-0 h-screen w-64 bg-sidebar border-r border-border transform transition-transform md:translate-x-0 z-40 ${isOpen ? 'translate-x-0' : '-translate-x-full'
+          }`}
       >
-        <div className="p-6 border-b border-border">
-          <Link href="/" className="flex items-center gap-2 font-bold text-lg hover-glow">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-accent glow-blue" />
-            <span>Educify</span>
+        <div className="p-6 border-b border-border/50">
+          <Link href="/" className="flex items-center gap-3 font-bold text-xl hover:opacity-80 transition-opacity">
+            <div className="w-10 h-10 rounded-xl bg-linear-to-br from-violet-600 to-indigo-600 flex items-center justify-center shadow-lg shadow-indigo-500/20">
+              <BookOpen className="text-white" size={24} />
+            </div>
+            <span className="bg-clip-text text-transparent bg-linear-to-r from-white to-white/70">Educify</span>
           </Link>
         </div>
 
@@ -60,11 +61,10 @@ export function SidebarNav() {
                 key={item.href}
                 href={item.href}
                 onClick={() => setIsOpen(false)}
-                className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-all ${
-                  isActive
+                className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-all ${isActive
                     ? 'bg-primary text-primary-foreground glow-blue'
                     : 'text-foreground hover:bg-card border border-transparent hover:border-border'
-                }`}
+                  }`}
               >
                 <Icon size={20} />
                 <span className="font-medium">{item.label}</span>

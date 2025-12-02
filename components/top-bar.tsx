@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { Bell, Search, Settings, LogOut } from 'lucide-react'
+import { Bell, Search, Settings, LogOut, User } from 'lucide-react'
 import { useAuth } from '@/lib/useAuth'
 
 export function TopBar() {
@@ -22,37 +22,42 @@ export function TopBar() {
   }
 
   return (
-    <header className="sticky top-0 z-20 w-full border-b border-border bg-background/80 backdrop-blur-sm">
+    <header className="sticky top-0 z-20 w-full border-b border-border/50 bg-background/80 backdrop-blur-xl">
       <div className="flex items-center justify-between h-16 px-4 md:px-8">
-        <div className="hidden md:flex flex-1 items-center gap-2 max-w-md">
-          <Search size={18} className="text-muted-foreground" />
+        <div className="hidden md:flex flex-1 items-center gap-3 max-w-md group">
+          <div className="p-2 rounded-lg bg-secondary/10 text-muted-foreground group-focus-within:text-primary transition-colors">
+            <Search size={18} />
+          </div>
           <input
             type="text"
-            placeholder="Search courses..."
-            className="w-full bg-input border border-border rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
+            placeholder="Search for anything..."
+            className="w-full bg-transparent border-none text-sm focus:outline-none placeholder:text-muted-foreground/50"
           />
         </div>
 
-        <div className="flex items-center gap-4 ml-auto">
-          <button className="p-2 rounded-lg hover:bg-card border border-transparent hover:border-border transition-all">
+        <div className="flex items-center gap-3 ml-auto">
+          <button className="p-2.5 rounded-full hover:bg-secondary/10 text-muted-foreground hover:text-foreground transition-all relative">
             <Bell size={20} />
+            <span className="absolute top-2 right-2.5 w-2 h-2 rounded-full bg-red-500 border-2 border-background" />
           </button>
 
-          <button className="p-2 rounded-lg hover:bg-card border border-transparent hover:border-border transition-all">
+          <button className="p-2.5 rounded-full hover:bg-secondary/10 text-muted-foreground hover:text-foreground transition-all">
             <Settings size={20} />
           </button>
 
-          <button
-            onClick={handleLogout}
-            disabled={loggingOut || isLoading}
-            className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-card border border-transparent hover:border-border transition-all"
-            aria-label="Logout"
-          >
-            <LogOut size={16} />
-            <span className="hidden sm:inline">Logout</span>
-          </button>
+          <div className="h-6 w-px bg-border/50 mx-2" />
 
-          <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent glow-blue" />
+          <div className="flex items-center gap-3 pl-2">
+            <div className="hidden md:block text-right">
+              <p className="text-sm font-semibold leading-none">User</p>
+              <p className="text-xs text-muted-foreground mt-1">Student</p>
+            </div>
+            <div className="w-10 h-10 rounded-full bg-linear-to-br from-fuchsia-600 to-pink-600 p-0.5 cursor-pointer hover:scale-105 transition-transform shadow-lg shadow-pink-500/20">
+              <div className="w-full h-full rounded-full bg-background flex items-center justify-center overflow-hidden">
+                <User className="text-foreground/80" size={20} />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </header>

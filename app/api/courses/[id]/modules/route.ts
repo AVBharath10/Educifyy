@@ -9,7 +9,7 @@ import { successResponse, errorResponse } from "@/lib/api-utils";
  */
 export async function POST(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
     const userId = request.headers.get("x-user-id");
@@ -20,7 +20,7 @@ export async function POST(
       );
     }
 
-    const { id: courseId } = params;
+    const { id: courseId } = await params;
     const body = await request.json();
 
     // Validate input
@@ -55,7 +55,13 @@ export async function POST(
     const module = await prisma.module.create({
       data: {
         courseId,
-        ...validation.data,
+        title: body.title,
+        type: body.type,
+        url: body.url || '',
+        content: body.content,
+        fileName: body.fileName,
+        duration: body.duration,
+        order: body.order,
       },
     });
 

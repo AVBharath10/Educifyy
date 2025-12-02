@@ -184,7 +184,34 @@ export async function DELETE(
       );
     }
 
-    // Delete course (cascade deletes modules, lessons, enrollments)
+    // 1. Fetch course with modules to get file URLs
+    const courseToDelete = await prisma.course.findUnique({
+      where: { id },
+      include: { modules: true },
+    });
+
+    if (courseToDelete) {
+      // 2. Delete files from S3 (fire and forget to speed up response, or await if strict)
+      const { deleteFromS3 } = await import("@/lib/s3");
+      const deletions = [];
+
+      // Delete thumbnail
+      if (courseToDelete.thumbnail && courseToDelete.thumbnail.includes("amazonaws.com")) {
+        deletions.push(deleteFromS3(courseToDelete.thumbnail));
+      }
+
+      // Delete module files
+      for (const module of courseToDelete.modules) {
+        if (module.url && module.url.includes("amazonaws.com")) {
+          deletions.push(deleteFromS3(module.url));
+        }
+      }
+
+      // Wait for all S3 deletions (optional: could be done in background)
+      await Promise.allSettled(deletions);
+    }
+
+    // 3. Delete course (cascade deletes modules, lessons, enrollments)
     await prisma.course.delete({
       where: { id },
     });

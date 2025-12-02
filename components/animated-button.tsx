@@ -18,11 +18,11 @@ export function AnimatedButton({
   size = 'md',
 }: AnimatedButtonProps) {
   const baseStyles = 'font-semibold rounded-lg transition-all duration-300 hover-glow border'
-  
+
   const variants = {
-    primary: 'bg-primary text-primary-foreground border-primary hover:bg-primary/90 glow-blue',
-    secondary: 'bg-secondary text-secondary-foreground border-secondary hover:bg-secondary/90 glow-purple',
-    outline: 'border-border bg-transparent text-foreground hover:bg-card hover:border-primary',
+    primary: 'bg-linear-to-r from-violet-600 to-indigo-600 text-white border-transparent hover:from-violet-500 hover:to-indigo-500 shadow-lg shadow-indigo-500/20',
+    secondary: 'bg-linear-to-r from-fuchsia-600 to-pink-600 text-white border-transparent hover:from-fuchsia-500 hover:to-pink-500 shadow-lg shadow-pink-500/20',
+    outline: 'border-white/10 bg-white/5 text-white hover:bg-white/10 hover:border-white/20 backdrop-blur-sm',
   }
 
   const sizes = {

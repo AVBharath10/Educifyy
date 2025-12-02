@@ -210,7 +210,8 @@ const userApi = {
             body: JSON.stringify(data)
         }),
     getStatistics: (userId)=>apiFetch(`/users/${userId}/statistics`),
-    getDashboard: (userId)=>apiFetch(`/users/${userId}/dashboard`)
+    getDashboard: (userId)=>apiFetch(`/users/${userId}/dashboard`),
+    getCreatedCourses: (userId)=>apiFetch(`/users/${userId}/courses-created`)
 };
 const searchApi = {
     searchCourses: (query, limit = 10)=>apiFetch(`/search/courses?q=${encodeURIComponent(query)}&limit=${limit}`, {

@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { successResponse, errorResponse } from "@/lib/api-utils";
+import { writeFile, mkdir } from "fs/promises";
+import path from "path";
 
 /**
  * POST /api/upload
@@ -8,7 +10,26 @@ import { successResponse, errorResponse } from "@/lib/api-utils";
  */
 export async function POST(request: NextRequest) {
   try {
-    const userId = request.headers.get("x-user-id");
+    let userId = request.headers.get("x-user-id");
+
+    // If middleware didn't inject user ID (because we bypassed it), verify token here
+    if (!userId) {
+      const token = request.cookies.get("auth-token")?.value;
+      if (token) {
+        try {
+          // We need to import verifyToken dynamically or move it to a shared lib that doesn't use 'server-only' if needed
+          // But lib/auth.ts uses 'jsonwebtoken' which is fine in route handlers
+          const { verifyToken } = await import("@/lib/auth");
+          const decoded = verifyToken(token);
+          if (decoded) {
+            userId = decoded.userId;
+          }
+        } catch (e) {
+          console.error("Token verification failed in upload route:", e);
+        }
+      }
+    }
+
     if (!userId) {
       return NextResponse.json(
         errorResponse("Unauthorized"),
@@ -52,11 +73,57 @@ export async function POST(request: NextRequest) {
       }
     }
 
-    // In production with Supabase:
-    // const url = await uploadFile({ bucket: 'educify', path: `${type}/${Date.now()}-${file.name}`, file });
-    
-    // For now, return mock presigned URL or local path
-    const url = `/uploads/${type}/${Date.now()}-${file.name.replace(/\s/g, "-")}`;
+    // Create unique filename
+    const timestamp = Date.now();
+    const safeName = file.name.replace(/[^a-zA-Z0-9.-]/g, "-");
+    const fileName = `${timestamp}-${safeName}`;
+
+    // Check if AWS is configured
+    const hasAwsConfig = process.env.AWS_ACCESS_KEY_ID && process.env.AWS_SECRET_ACCESS_KEY && process.env.AWS_BUCKET_NAME;
+
+    if (hasAwsConfig) {
+      try {
+        console.log("Uploading to AWS S3...");
+        const { uploadToS3 } = await import("@/lib/s3");
+        const buffer = Buffer.from(await file.arrayBuffer());
+        // Add type prefix to folder structure in S3
+        const s3Key = `${type}/${fileName}`;
+        const url = await uploadToS3(buffer, s3Key, file.type);
+
+        return NextResponse.json(
+          successResponse(
+            {
+              url,
+              fileName: file.name,
+              size: file.size,
+              type: file.type,
+              provider: 's3'
+            },
+            "File uploaded successfully to S3"
+          ),
+          { status: 201 }
+        );
+      } catch (s3Error) {
+        console.error("S3 Upload failed, falling back to local:", s3Error);
+        // Fallback to local upload if S3 fails
+      }
+    }
+
+    // Ensure upload directory exists
+    const uploadDir = path.join(process.cwd(), "public", "uploads", type);
+    try {
+      await mkdir(uploadDir, { recursive: true });
+    } catch (e) {
+      console.error("Failed to create upload directory:", e);
+    }
+
+    // Write file to disk
+    const buffer = Buffer.from(await file.arrayBuffer());
+    const filePath = path.join(uploadDir, fileName);
+    await writeFile(filePath, buffer);
+
+    // Public URL
+    const url = `/uploads/${type}/${fileName}`;
 
     return NextResponse.json(
       successResponse(
@@ -65,6 +132,7 @@ export async function POST(request: NextRequest) {
           fileName: file.name,
           size: file.size,
           type: file.type,
+          provider: 'local'
         },
         "File uploaded successfully"
       ),

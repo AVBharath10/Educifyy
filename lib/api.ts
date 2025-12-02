@@ -246,9 +246,9 @@ export const courseApi = {
     apiFetch<CourseDetail>(`/courses/${id}`, { authenticated: false }),
 
   getCourses: (params?: any) =>
-    apiFetch<Course[]>(`/courses`, { 
+    apiFetch<Course[]>(`/courses`, {
       authenticated: false,
-      ...params 
+      ...params
     }),
 
   createCourse: (data: CreateCourseData) =>
@@ -426,6 +426,9 @@ export const userApi = {
 
   getDashboard: (userId: string) =>
     apiFetch<DashboardData>(`/users/${userId}/dashboard`),
+
+  getCreatedCourses: (userId: string) =>
+    apiFetch<Course[]>(`/users/${userId}/courses-created`),
 };
 
 // ============================================================================

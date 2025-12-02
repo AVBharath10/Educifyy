@@ -140,7 +140,8 @@ const PUBLIC_ROUTES = [
     "/api/auth/google",
     "/api/auth/google/callback",
     "/api/search/courses",
-    "/api/recommendations"
+    "/api/recommendations",
+    "/api/upload"
 ];
 function middleware(request) {
     const { pathname } = request.nextUrl;
@@ -201,7 +202,7 @@ function middleware(request) {
 }
 const config = {
     matcher: [
-        "/((?!_next/static|_next/image|favicon.ico|public).*)"
+        "/((?!_next/static|_next/image|favicon.ico|public|api/upload).*)"
     ],
     runtime: "nodejs"
 };

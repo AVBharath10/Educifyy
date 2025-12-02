@@ -119,6 +119,8 @@ model Module {
   duration            String?
   order               Int
   
+  content             String?             @db.Text
+  
   createdAt           DateTime            @default(now())
 
   @@index([courseId])
@@ -128,6 +130,7 @@ model Module {
 enum ModuleType {
   VIDEO
   DOCUMENT
+  TEXT
 }
 
 model Lesson {

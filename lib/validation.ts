@@ -9,7 +9,7 @@ export const SignupSchema = z.object({
     .regex(/[A-Z]/, "Password must contain uppercase letter")
     .regex(/[a-z]/, "Password must contain lowercase letter")
     .regex(/[0-9]/, "Password must contain number"),
-   confirmPassword: z.string().min(1, "Confirm password is required"),
+  confirmPassword: z.string().min(1, "Confirm password is required"),
   fullName: z.string().min(2, "Name must be at least 2 characters"),
 }).refine((data) => data.password === data.confirmPassword, {
   message: "Passwords don't match",
@@ -42,6 +42,7 @@ export const CreateCourseSchema = z.object({
   highlights: z.array(z.string()).optional(),
   requirements: z.array(z.string()).optional(),
   whatYouLearn: z.array(z.string()).optional(),
+  status: z.enum(["DRAFT", "PUBLISHED", "ARCHIVED"]).optional(),
 });
 
 export const UpdateCourseSchema = CreateCourseSchema.partial();
@@ -50,9 +51,9 @@ export const AddModuleSchema = z.object({
   title: z.string().min(1, "Module title is required"),
   type: z.enum(["VIDEO", "DOCUMENT"]),
   fileName: z.string().min(1),
-  url: z.string().url("Invalid URL"),
+  url: z.string().min(1, "URL is required"),
   duration: z.string().optional(),
-  order: z.number().int().positive(),
+  order: z.number().int().min(0),
 });
 
 // User Schemas

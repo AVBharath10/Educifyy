@@ -12,9 +12,9 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$proje
 function AnimatedButton({ children, onClick, className = '', variant = 'primary', size = 'md' }) {
     const baseStyles = 'font-semibold rounded-lg transition-all duration-300 hover-glow border';
     const variants = {
-        primary: 'bg-primary text-primary-foreground border-primary hover:bg-primary/90 glow-blue',
-        secondary: 'bg-secondary text-secondary-foreground border-secondary hover:bg-secondary/90 glow-purple',
-        outline: 'border-border bg-transparent text-foreground hover:bg-card hover:border-primary'
+        primary: 'bg-linear-to-r from-violet-600 to-indigo-600 text-white border-transparent hover:from-violet-500 hover:to-indigo-500 shadow-lg shadow-indigo-500/20',
+        secondary: 'bg-linear-to-r from-fuchsia-600 to-pink-600 text-white border-transparent hover:from-fuchsia-500 hover:to-pink-500 shadow-lg shadow-pink-500/20',
+        outline: 'border-white/10 bg-white/5 text-white hover:bg-white/10 hover:border-white/20 backdrop-blur-sm'
     };
     const sizes = {
         sm: 'px-3 py-2 text-sm',
@@ -88,24 +88,26 @@ function HomePage() {
                             href: "/",
                             className: "flex items-center gap-2 font-bold text-xl",
                             children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-accent glow-blue"
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                    src: "/icon.svg",
+                                    alt: "Educify",
+                                    className: "w-8 h-8"
                                 }, void 0, false, {
                                     fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                    lineNumber: 23,
+                                    lineNumber: 18,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     children: "Educify"
                                 }, void 0, false, {
                                     fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                    lineNumber: 24,
+                                    lineNumber: 19,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                            lineNumber: 22,
+                            lineNumber: 17,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -117,7 +119,7 @@ function HomePage() {
                                     children: "Explore"
                                 }, void 0, false, {
                                     fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                    lineNumber: 27,
+                                    lineNumber: 22,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -126,7 +128,7 @@ function HomePage() {
                                     children: "Teach"
                                 }, void 0, false, {
                                     fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                    lineNumber: 30,
+                                    lineNumber: 25,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -135,149 +137,160 @@ function HomePage() {
                                     children: "Dashboard"
                                 }, void 0, false, {
                                     fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                    lineNumber: 33,
+                                    lineNumber: 28,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                            lineNumber: 26,
+                            lineNumber: 21,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$components$2f$animated$2d$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AnimatedButton"], {
                             children: "Get Started"
                         }, void 0, false, {
                             fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                            lineNumber: 37,
+                            lineNumber: 32,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                    lineNumber: 21,
+                    lineNumber: 16,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                lineNumber: 20,
+                lineNumber: 15,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-                className: "relative py-20 md:py-32 px-4 sm:px-6 lg:px-8 overflow-hidden",
+                className: "relative py-24 md:py-32 px-4 sm:px-6 lg:px-8 overflow-hidden",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "absolute inset-0 -z-10",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "absolute top-20 right-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl"
+                                className: "absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-background to-background"
                             }, void 0, false, {
                                 fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                lineNumber: 45,
+                                lineNumber: 37,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "absolute bottom-20 left-20 w-96 h-96 bg-accent/10 rounded-full blur-3xl"
+                                className: "absolute top-20 right-20 w-96 h-96 bg-primary/10 rounded-full blur-[100px]"
                             }, void 0, false, {
                                 fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                lineNumber: 46,
+                                lineNumber: 38,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "absolute bottom-20 left-20 w-96 h-96 bg-accent/10 rounded-full blur-[100px]"
+                            }, void 0, false, {
+                                fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
+                                lineNumber: 39,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                        lineNumber: 44,
+                        lineNumber: 36,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "max-w-5xl mx-auto text-center",
+                        className: "max-w-5xl mx-auto text-center relative z-10",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full border border-primary/30 bg-primary/5",
+                                className: "inline-flex items-center gap-2 mb-8 px-4 py-1.5 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-sm animate-fade-in-up",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$sparkles$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Sparkles$3e$__["Sparkles"], {
-                                        size: 16,
+                                        size: 14,
                                         className: "text-primary"
                                     }, void 0, false, {
                                         fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                        lineNumber: 51,
+                                        lineNumber: 44,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         className: "text-sm font-medium text-primary",
-                                        children: "Welcome to the future of learning"
+                                        children: "The Future of Education is Here"
                                     }, void 0, false, {
                                         fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                        lineNumber: 52,
+                                        lineNumber: 45,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                lineNumber: 50,
+                                lineNumber: 43,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                                className: "text-5xl md:text-7xl font-bold mb-6 text-balance leading-tight",
+                                className: "text-6xl md:text-8xl font-bold mb-8 text-balance leading-tight tracking-tight animate-fade-in-up delay-100",
                                 children: [
-                                    "Learn ",
+                                    "Master ",
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent",
-                                        children: "Anything"
+                                        className: "text-transparent bg-clip-text bg-gradient-to-r from-primary via-purple-400 to-accent",
+                                        children: "Any Skill"
                                     }, void 0, false, {
                                         fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                        lineNumber: 56,
-                                        columnNumber: 19
+                                        lineNumber: 49,
+                                        columnNumber: 20
                                     }, this),
-                                    ", Teach ",
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
+                                        fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
+                                        lineNumber: 50,
+                                        columnNumber: 13
+                                    }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "text-transparent bg-clip-text bg-gradient-to-r from-accent to-primary",
-                                        children: "Everything"
+                                        className: "text-foreground",
+                                        children: "Unleash Potential"
                                     }, void 0, false, {
                                         fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                        lineNumber: 56,
-                                        columnNumber: 130
+                                        lineNumber: 51,
+                                        columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                lineNumber: 55,
+                                lineNumber: 48,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto text-balance",
-                                children: "Join Educify and unlock a world of knowledge. Learn from experts, share your expertise, and grow together with a community of learners and educators."
+                                className: "text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto text-balance leading-relaxed animate-fade-in-up delay-200",
+                                children: "Join the world's most advanced learning ecosystem. Connect with expert mentors, access premium content, and accelerate your career growth."
                             }, void 0, false, {
                                 fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                lineNumber: 59,
+                                lineNumber: 54,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "flex flex-col sm:flex-row gap-4 justify-center mb-16",
+                                className: "flex flex-col sm:flex-row gap-6 justify-center mb-20 animate-fade-in-up delay-300",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                         href: "/catalog",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$components$2f$animated$2d$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AnimatedButton"], {
                                             size: "lg",
-                                            className: "w-full sm:w-auto",
+                                            className: "w-full sm:w-auto px-8 py-6 text-lg shadow-lg shadow-primary/25",
                                             children: [
-                                                "Explore Courses",
+                                                "Start Learning Now",
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$arrow$2d$right$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowRight$3e$__["ArrowRight"], {
                                                     className: "ml-2 inline-block",
                                                     size: 20
                                                 }, void 0, false, {
                                                     fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                                    lineNumber: 67,
+                                                    lineNumber: 62,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                            lineNumber: 65,
+                                            lineNumber: 60,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                        lineNumber: 64,
+                                        lineNumber: 59,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -285,118 +298,34 @@ function HomePage() {
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$components$2f$animated$2d$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AnimatedButton"], {
                                             size: "lg",
                                             variant: "outline",
-                                            className: "w-full sm:w-auto",
-                                            children: "Start Teaching"
+                                            className: "w-full sm:w-auto px-8 py-6 text-lg backdrop-blur-sm bg-background/50",
+                                            children: "Become an Instructor"
                                         }, void 0, false, {
                                             fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                            lineNumber: 71,
+                                            lineNumber: 66,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                        lineNumber: 70,
+                                        lineNumber: 65,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                lineNumber: 63,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "grid grid-cols-3 gap-4 md:gap-8 mt-12",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "p-4 rounded-lg border border-border bg-card/50 hover-glow",
-                                        children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "text-2xl md:text-3xl font-bold text-primary mb-1",
-                                                children: "10K+"
-                                            }, void 0, false, {
-                                                fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                                lineNumber: 80,
-                                                columnNumber: 15
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "text-xs md:text-sm text-muted-foreground",
-                                                children: "Active Learners"
-                                            }, void 0, false, {
-                                                fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                                lineNumber: 81,
-                                                columnNumber: 15
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                        lineNumber: 79,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "p-4 rounded-lg border border-border bg-card/50 hover-glow",
-                                        children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "text-2xl md:text-3xl font-bold text-accent mb-1",
-                                                children: "500+"
-                                            }, void 0, false, {
-                                                fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                                lineNumber: 84,
-                                                columnNumber: 15
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "text-xs md:text-sm text-muted-foreground",
-                                                children: "Expert Courses"
-                                            }, void 0, false, {
-                                                fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                                lineNumber: 85,
-                                                columnNumber: 15
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                        lineNumber: 83,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "p-4 rounded-lg border border-border bg-card/50 hover-glow",
-                                        children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "text-2xl md:text-3xl font-bold text-secondary mb-1",
-                                                children: "95%"
-                                            }, void 0, false, {
-                                                fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                                lineNumber: 88,
-                                                columnNumber: 15
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "text-xs md:text-sm text-muted-foreground",
-                                                children: "Success Rate"
-                                            }, void 0, false, {
-                                                fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                                lineNumber: 89,
-                                                columnNumber: 15
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                        lineNumber: 87,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                lineNumber: 78,
+                                lineNumber: 58,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                        lineNumber: 49,
+                        lineNumber: 42,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                lineNumber: 42,
+                lineNumber: 35,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -409,7 +338,7 @@ function HomePage() {
                             children: "Why Choose Educify?"
                         }, void 0, false, {
                             fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                            lineNumber: 98,
+                            lineNumber: 77,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -417,7 +346,7 @@ function HomePage() {
                             children: "Experience a revolutionary learning platform designed for modern educators and students"
                         }, void 0, false, {
                             fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                            lineNumber: 99,
+                            lineNumber: 78,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -465,12 +394,12 @@ function HomePage() {
                                                 className: "text-primary-foreground"
                                             }, void 0, false, {
                                                 fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                                lineNumber: 143,
+                                                lineNumber: 121,
                                                 columnNumber: 21
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                            lineNumber: 142,
+                                            lineNumber: 120,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -478,7 +407,7 @@ function HomePage() {
                                             children: feature.title
                                         }, void 0, false, {
                                             fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                            lineNumber: 145,
+                                            lineNumber: 123,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -486,138 +415,30 @@ function HomePage() {
                                             children: feature.description
                                         }, void 0, false, {
                                             fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                            lineNumber: 146,
+                                            lineNumber: 124,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, index, true, {
                                     fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                    lineNumber: 138,
+                                    lineNumber: 116,
                                     columnNumber: 17
                                 }, this);
                             })
                         }, void 0, false, {
                             fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                            lineNumber: 103,
+                            lineNumber: 81,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                    lineNumber: 97,
+                    lineNumber: 76,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                lineNumber: 96,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-                className: "py-20 px-4 sm:px-6 lg:px-8 bg-card/30 border-t border-border",
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "max-w-6xl mx-auto",
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                            className: "text-4xl md:text-5xl font-bold text-center mb-12",
-                            children: "What Our Community Says"
-                        }, void 0, false, {
-                            fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                            lineNumber: 157,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "grid md:grid-cols-3 gap-6",
-                            children: [
-                                {
-                                    name: 'Sarah Chen',
-                                    role: 'Student',
-                                    content: 'Educify transformed my learning experience. The courses are comprehensive and the community is incredibly supportive!'
-                                },
-                                {
-                                    name: 'Marcus Johnson',
-                                    role: 'Instructor',
-                                    content: 'As an educator, Educify provides everything I need to create engaging content and connect with students globally.'
-                                },
-                                {
-                                    name: 'Priya Patel',
-                                    role: 'Student',
-                                    content: 'The personalized recommendations have helped me discover courses perfectly aligned with my goals.'
-                                }
-                            ].map((testimonial, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "p-6 rounded-lg border border-border bg-background hover-glow",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "flex gap-4 mb-4",
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "w-12 h-12 rounded-full bg-gradient-to-br from-primary to-accent glow-blue flex-shrink-0"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                                    lineNumber: 179,
-                                                    columnNumber: 19
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    children: [
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                            className: "font-semibold",
-                                                            children: testimonial.name
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                                            lineNumber: 181,
-                                                            columnNumber: 21
-                                                        }, this),
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                            className: "text-sm text-muted-foreground",
-                                                            children: testimonial.role
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                                            lineNumber: 182,
-                                                            columnNumber: 21
-                                                        }, this)
-                                                    ]
-                                                }, void 0, true, {
-                                                    fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                                    lineNumber: 180,
-                                                    columnNumber: 19
-                                                }, this)
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                            lineNumber: 178,
-                                            columnNumber: 17
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                            className: "text-sm text-foreground/80",
-                                            children: [
-                                                '"',
-                                                testimonial.content,
-                                                '"'
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                            lineNumber: 185,
-                                            columnNumber: 17
-                                        }, this)
-                                    ]
-                                }, index, true, {
-                                    fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                    lineNumber: 177,
-                                    columnNumber: 15
-                                }, this))
-                        }, void 0, false, {
-                            fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                            lineNumber: 159,
-                            columnNumber: 11
-                        }, this)
-                    ]
-                }, void 0, true, {
-                    fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                    lineNumber: 156,
-                    columnNumber: 9
-                }, this)
-            }, void 0, false, {
-                fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                lineNumber: 155,
+                lineNumber: 75,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -630,7 +451,7 @@ function HomePage() {
                             children: "Ready to Start Learning?"
                         }, void 0, false, {
                             fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                            lineNumber: 195,
+                            lineNumber: 133,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -638,7 +459,7 @@ function HomePage() {
                             children: "Join thousands of students and instructors already transforming their education on Educify."
                         }, void 0, false, {
                             fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                            lineNumber: 196,
+                            lineNumber: 134,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -652,12 +473,12 @@ function HomePage() {
                                         children: "Browse Courses"
                                     }, void 0, false, {
                                         fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                        lineNumber: 201,
+                                        lineNumber: 139,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                    lineNumber: 200,
+                                    lineNumber: 138,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -669,29 +490,29 @@ function HomePage() {
                                         children: "Create a Course"
                                     }, void 0, false, {
                                         fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                        lineNumber: 206,
+                                        lineNumber: 144,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                    lineNumber: 205,
+                                    lineNumber: 143,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                            lineNumber: 199,
+                            lineNumber: 137,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                    lineNumber: 194,
+                    lineNumber: 132,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                lineNumber: 193,
+                lineNumber: 131,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("footer", {
@@ -709,20 +530,20 @@ function HomePage() {
                                                 className: "w-6 h-6 rounded-lg bg-gradient-to-br from-primary to-accent glow-blue"
                                             }, void 0, false, {
                                                 fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                                lineNumber: 219,
+                                                lineNumber: 155,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                 children: "Educify"
                                             }, void 0, false, {
                                                 fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                                lineNumber: 220,
+                                                lineNumber: 156,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                        lineNumber: 218,
+                                        lineNumber: 154,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -730,13 +551,13 @@ function HomePage() {
                                         children: "Learn, teach, and grow together."
                                     }, void 0, false, {
                                         fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                        lineNumber: 222,
+                                        lineNumber: 158,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                lineNumber: 217,
+                                lineNumber: 153,
                                 columnNumber: 11
                             }, this),
                             [
@@ -771,7 +592,7 @@ function HomePage() {
                                             children: group.title
                                         }, void 0, false, {
                                             fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                            lineNumber: 230,
+                                            lineNumber: 166,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -783,29 +604,29 @@ function HomePage() {
                                                         children: link
                                                     }, void 0, false, {
                                                         fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                                        lineNumber: 234,
+                                                        lineNumber: 170,
                                                         columnNumber: 21
                                                     }, this)
                                                 }, link, false, {
                                                     fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                                    lineNumber: 233,
+                                                    lineNumber: 169,
                                                     columnNumber: 19
                                                 }, this))
                                         }, void 0, false, {
                                             fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                            lineNumber: 231,
+                                            lineNumber: 167,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, index, true, {
                                     fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                    lineNumber: 229,
+                                    lineNumber: 165,
                                     columnNumber: 13
                                 }, this))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                        lineNumber: 216,
+                        lineNumber: 152,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -815,7 +636,7 @@ function HomePage() {
                                 children: "© 2025 Educify. All rights reserved."
                             }, void 0, false, {
                                 fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                lineNumber: 245,
+                                lineNumber: 180,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -827,7 +648,7 @@ function HomePage() {
                                         children: "Privacy Policy"
                                     }, void 0, false, {
                                         fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                        lineNumber: 247,
+                                        lineNumber: 182,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -836,7 +657,7 @@ function HomePage() {
                                         children: "Terms of Service"
                                     }, void 0, false, {
                                         fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                        lineNumber: 248,
+                                        lineNumber: 183,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$projects$2f$educify$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -845,31 +666,31 @@ function HomePage() {
                                         children: "Cookie Policy"
                                     }, void 0, false, {
                                         fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                        lineNumber: 249,
+                                        lineNumber: 184,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                                lineNumber: 246,
+                                lineNumber: 181,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                        lineNumber: 244,
+                        lineNumber: 179,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-                lineNumber: 215,
+                lineNumber: 151,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/OneDrive/Desktop/projects/educify/app/page.tsx",
-        lineNumber: 18,
+        lineNumber: 14,
         columnNumber: 5
     }, this);
 }

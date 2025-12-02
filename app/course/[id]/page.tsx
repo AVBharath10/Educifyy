@@ -18,6 +18,7 @@ export default function CourseDetailsPage() {
   const [courseData, setCourseData] = useState<any>(null)
   const [isLoadingCourse, setIsLoadingCourse] = useState(true)
   const [error, setError] = useState<string | null>(null)
+  const [isEnrolled, setIsEnrolled] = useState(false)
   const [isWishlisted, setIsWishlisted] = useState(false)
 
   useEffect(() => {
@@ -31,6 +32,20 @@ export default function CourseDetailsPage() {
         setError(null)
         const data = await courseApi.getCourse(courseId)
         setCourseData(data)
+
+        if (isAuthenticated && user?.id) {
+          try {
+            // Check enrollment
+            const enrollmentData = await import('@/lib/api').then(m => m.enrollmentApi.checkEnrollment(courseId))
+            setIsEnrolled(enrollmentData.enrolled)
+
+            // Check wishlist
+            const wishlistData = await import('@/lib/api').then(m => m.wishlistApi.checkInWishlist(courseId))
+            setIsWishlisted(wishlistData.inWishlist)
+          } catch (e) {
+            console.error('Failed to check status:', e)
+          }
+        }
       } catch (err: any) {
         // Improved logging for ApiError
         if (err instanceof ApiError) {
@@ -45,7 +60,7 @@ export default function CourseDetailsPage() {
       }
     }
     fetchCourse()
-  }, [courseId])
+  }, [courseId, isAuthenticated, user?.id])
 
   if (!isInitialized) {
     return (
@@ -178,19 +193,25 @@ export default function CourseDetailsPage() {
           <div className="space-y-6">
             {/* Enrollment Card */}
             <div className="p-6 rounded-lg border border-border bg-card space-y-4">
-              <div>
-                <p className="text-4xl font-bold">${course.price || '0'}</p>
-                <p className="text-sm text-muted-foreground">Full lifetime access</p>
-              </div>
 
               {isAuthenticated && isInitialized ? (
-                <EnrollButton courseId={courseId} />
+                isEnrolled ? (
+                  <Link href={`/learn/${courseId}`}>
+                    <AnimatedButton className="w-full">
+                      Continue Learning
+                    </AnimatedButton>
+                  </Link>
+                ) : (
+                  <EnrollButton
+                    courseId={courseId}
+                    onEnrollSuccess={() => setIsEnrolled(true)}
+                  />
+                )
               ) : (
-                <Link
-                  href="/auth/login"
-                  className="w-full px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-all text-center block"
-                >
-                  Sign in to Enroll
+                <Link href="/auth/login" className="block w-full">
+                  <AnimatedButton className="w-full">
+                    Sign in to Enroll
+                  </AnimatedButton>
                 </Link>
               )}
 
@@ -215,15 +236,30 @@ export default function CourseDetailsPage() {
                   <span className="text-sm">Share</span>
                 </button>
                 <button
-                  onClick={() => setIsWishlisted(!isWishlisted)}
-                  className={`flex items-center justify-center gap-2 px-3 py-2 rounded-lg border transition-colors ${
-                    isWishlisted
-                      ? 'bg-red-100 border-red-300 text-red-600'
-                      : 'bg-card hover:bg-muted border-border'
-                  }`}
+                  onClick={async () => {
+                    if (!isAuthenticated) {
+                      // Redirect to login or show toast
+                      return
+                    }
+                    try {
+                      if (isWishlisted) {
+                        await import('@/lib/api').then(m => m.wishlistApi.removeFromWishlist(courseId))
+                        setIsWishlisted(false)
+                      } else {
+                        await import('@/lib/api').then(m => m.wishlistApi.addToWishlist(courseId))
+                        setIsWishlisted(true)
+                      }
+                    } catch (e) {
+                      console.error('Failed to toggle wishlist:', e)
+                    }
+                  }}
+                  className={`flex items-center justify-center gap-2 px-3 py-2 rounded-lg border transition-colors ${isWishlisted
+                    ? 'bg-red-100 border-red-300 text-red-600'
+                    : 'bg-card hover:bg-muted border-border'
+                    }`}
                 >
                   <Heart size={18} fill={isWishlisted ? 'currentColor' : 'none'} />
-                  <span className="text-sm">Save</span>
+                  <span className="text-sm">{isWishlisted ? 'Saved' : 'Save'}</span>
                 </button>
               </div>
             </div>

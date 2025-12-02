@@ -8,11 +8,11 @@ import { successResponse, errorResponse } from "@/lib/api-utils";
  */
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
     const userId = request.headers.get("x-user-id");
-    const { id: profileId } = params;
+    const { id: profileId } = await params;
 
     if (userId !== profileId) {
       return NextResponse.json(

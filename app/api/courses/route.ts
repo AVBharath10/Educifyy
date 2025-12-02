@@ -132,7 +132,7 @@ export async function POST(request: NextRequest) {
         highlights: highlights || [],
         requirements: requirements || [],
         whatYouLearn: whatYouLearn || [],
-        status: "DRAFT",
+        status: (validation.data.status as any) || "DRAFT",
       },
       include: {
         instructor: {

@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { Star, Users, Clock } from 'lucide-react'
+import { ConfirmationModal } from '@/components/confirmation-modal'
 
 interface CourseCardProps {
   id: string
@@ -21,52 +22,83 @@ export function CourseCard({
   instructor,
   category,
   difficulty,
-  rating,
-  students,
   duration,
   thumbnail,
-}: CourseCardProps) {
+  onDelete,
+}: CourseCardProps & { onDelete?: (id: string) => void }) {
   return (
-    <Link href={`/course/${id}`}>
-      <div className="group h-full rounded-lg border border-border bg-card overflow-hidden hover-glow transition-all cursor-pointer">
+    <div className="group relative h-full rounded-2xl border border-border/50 bg-card overflow-hidden hover:shadow-2xl hover:shadow-primary/5 hover:-translate-y-1 transition-all duration-300 flex flex-col">
+      <Link href={`/course/${id}`} className="flex-1 flex flex-col">
         {/* Thumbnail */}
-        <div className="relative h-40 w-full bg-gradient-purple-blue overflow-hidden">
+        <div className="relative aspect-[16/9] w-full bg-muted overflow-hidden">
           {thumbnail ? (
-            <img src={thumbnail || "/placeholder.svg"} alt={title} className="w-full h-full object-cover group-hover:scale-110 transition-transform" />
+            <img
+              src={thumbnail}
+              alt={title}
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            />
           ) : (
-            <div className="w-full h-full flex items-center justify-center">
-              <div className="text-3xl opacity-30">📚</div>
+            <div className="w-full h-full flex items-center justify-center bg-linear-to-br from-secondary/20 to-primary/10">
+              <div className="text-5xl opacity-20 grayscale">🎓</div>
             </div>
           )}
-          <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
+
+          {/* Category Badge */}
+          <div className="absolute top-3 left-3">
+            <span className="px-3 py-1 rounded-full bg-white/10 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-wider border border-white/20 shadow-lg">
+              {category.replace(/_/g, ' ')}
+            </span>
+          </div>
         </div>
 
         {/* Content */}
-        <div className="p-4">
-          <div className="flex items-center gap-2 mb-2">
-            <span className="text-xs px-2 py-1 rounded-full bg-primary/20 text-primary font-medium">{category}</span>
-            <span className="text-xs px-2 py-1 rounded-full bg-secondary/20 text-secondary font-medium">{difficulty}</span>
+        <div className="p-5 flex flex-col flex-1 gap-4">
+          <h3 className="font-bold text-lg leading-snug group-hover:text-primary transition-colors line-clamp-2">
+            {title}
+          </h3>
+
+          <div className="flex items-center gap-2 text-sm text-muted-foreground">
+            <div className="w-6 h-6 rounded-full bg-secondary/20 flex items-center justify-center text-xs font-bold text-secondary-foreground">
+              {(instructor && instructor !== 'Unknown' ? instructor[0] : 'E')}
+            </div>
+            <span className="font-medium">{instructor === 'Unknown' ? 'Educify Instructor' : instructor}</span>
           </div>
 
-          <h3 className="font-bold text-sm mb-2 line-clamp-2 group-hover:text-primary transition-colors">{title}</h3>
-          <p className="text-xs text-muted-foreground mb-3">{instructor}</p>
-
-          <div className="flex items-center gap-3 pt-3 border-t border-border text-xs text-muted-foreground">
-            <div className="flex items-center gap-1">
-              <Star size={14} className="fill-accent text-accent" />
-              <span>{rating}</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <Users size={14} />
-              <span>{students}</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <Clock size={14} />
+          <div className="mt-auto pt-4 border-t border-border/50 flex items-center justify-between text-xs font-medium text-muted-foreground">
+            <div className="flex items-center gap-1.5">
+              <Clock size={14} className="text-primary/70" />
               <span>{duration}</span>
             </div>
           </div>
         </div>
-      </div>
-    </Link>
+      </Link>
+
+      {/* Delete Button (Overlay) */}
+      {onDelete && (
+        <div className="absolute top-3 right-3 z-10 opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-300">
+          <ConfirmationModal
+            title="Delete Course?"
+            description="Are you sure you want to delete this course? This action cannot be undone and will remove all videos and enrollments."
+            confirmText="Delete Course"
+            variant="destructive"
+            onConfirm={async () => onDelete(id)}
+            trigger={
+              <button
+                className="p-2 rounded-xl bg-red-500/80 hover:bg-red-500 text-white backdrop-blur-md shadow-lg transition-colors"
+                title="Delete Course"
+                onClick={(e) => e.stopPropagation()} // Prevent card click
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M3 6h18"></path>
+                  <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
+                  <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
+                </svg>
+              </button>
+            }
+          />
+        </div>
+      )}
+    </div>
   )
 }

@@ -8,11 +8,11 @@ import { successResponse, errorResponse } from "@/lib/api-utils";
  */
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
     const userId = request.headers.get("x-user-id");
-    const { id: profileUserId } = params;
+    const { id: profileUserId } = await params;
 
     // User can only see their own enrollments (unless admin)
     if (userId !== profileUserId) {

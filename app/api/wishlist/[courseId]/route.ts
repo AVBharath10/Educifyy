@@ -8,11 +8,11 @@ import { successResponse, errorResponse } from "@/lib/api-utils";
  */
 export async function GET(
   request: NextRequest,
-  { params }: { params: { courseId: string } }
+  { params }: { params: Promise<{ courseId: string }> }
 ) {
   try {
     const userId = request.headers.get("x-user-id");
-    const { courseId } = params;
+    const { courseId } = await params;
 
     // If no user, return not in wishlist
     if (!userId) {
@@ -52,7 +52,7 @@ export async function GET(
  */
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { courseId: string } }
+  { params }: { params: Promise<{ courseId: string }> }
 ) {
   try {
     const userId = request.headers.get("x-user-id");
@@ -62,8 +62,7 @@ export async function DELETE(
         { status: 401 }
       );
     }
-
-    const { courseId } = params;
+    const { courseId } = await params;
 
     await prisma.wishlist.deleteMany({
       where: {

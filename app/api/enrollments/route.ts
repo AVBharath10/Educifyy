@@ -98,48 +98,4 @@ export async function POST(request: NextRequest) {
   }
 }
 
-/**
- * GET /api/enrollments/[courseId]
- * Check if user is enrolled in a course
- */
-export async function GET(
-  request: NextRequest,
-  { params }: { params: { courseId: string } }
-) {
-  try {
-    const userId = request.headers.get("x-user-id");
-    const { courseId } = params;
 
-    // If no user, return not enrolled
-    if (!userId) {
-      return NextResponse.json(
-        successResponse({
-          enrolled: false,
-          enrollment: null,
-        })
-      );
-    }
-
-    const enrollment = await prisma.enrollment.findUnique({
-      where: {
-        userId_courseId: {
-          userId,
-          courseId,
-        },
-      },
-    });
-
-    return NextResponse.json(
-      successResponse({
-        enrolled: !!enrollment,
-        enrollment: enrollment || null,
-      })
-    );
-  } catch (error) {
-    console.error("Check enrollment error:", error);
-    return NextResponse.json(
-      errorResponse("Failed to check enrollment"),
-      { status: 500 }
-    );
-  }
-}

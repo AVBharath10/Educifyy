@@ -15,6 +15,7 @@ const PUBLIC_ROUTES = [
 
   "/api/search/courses",
   "/api/recommendations",
+  "/api/upload", // Bypass middleware to avoid body locking issues with multipart/form-data
 ];
 
 export function middleware(request: NextRequest) {
@@ -88,6 +89,6 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/((?!_next/static|_next/image|favicon.ico|public).*)"],
+  matcher: ["/((?!_next/static|_next/image|favicon.ico|public|api/upload).*)"],
   runtime: "nodejs",
 };

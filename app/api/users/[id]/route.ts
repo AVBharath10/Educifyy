@@ -10,10 +10,10 @@ import { uploadUserAvatar } from "@/lib/storage";
  */
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    const { id } = params;
+    const { id } = await params;
 
     const user = await prisma.user.findUnique({
       where: { id },
@@ -110,11 +110,11 @@ export async function GET(
  */
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
     const userId = request.headers.get("x-user-id");
-    const { id: profileId } = params;
+    const { id: profileId } = await params;
 
     // User can only update their own profile
     if (userId !== profileId) {

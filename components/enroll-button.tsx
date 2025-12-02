@@ -42,6 +42,9 @@ export function EnrollButton({
       if (err.status === 409) {
         setIsEnrolled(true);
         setError(null);
+        if (onEnrollSuccess) {
+          onEnrollSuccess();
+        }
       } else {
         setError(err.message || "Failed to enroll");
       }
@@ -53,7 +56,7 @@ export function EnrollButton({
   const buttonStyles = {
     primary: isEnrolled
       ? "bg-green-600 text-white hover:bg-green-700"
-      : "bg-primary text-white hover:bg-primary/90",
+      : "bg-primary text-primary-foreground hover:bg-primary/90",
     secondary: isEnrolled
       ? "bg-green-100 text-green-700 border border-green-300 hover:bg-green-200"
       : "bg-transparent border border-primary text-primary hover:bg-primary/10",
