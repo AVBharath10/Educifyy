@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description: 'Modern educational platform for learning and sharing courses',
   generator: 'v0.app',
   icons: {
-    icon: '/icon.svg',
+    icon: '/icon.png',
   },
 }
 
