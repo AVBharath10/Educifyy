@@ -8,9 +8,10 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: 'Educify - Learn & Teach',
   description: 'Modern educational platform for learning and sharing courses',
-  generator: 'v0.app',
   icons: {
-    icon: '/icon.png',
+    icon: '/icon.png?v=3',
+    shortcut: '/icon.png?v=3',
+    apple: '/icon.png?v=3',
   },
 }
 
