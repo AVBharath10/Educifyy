@@ -20,7 +20,7 @@ export async function POST(request: NextRequest) {
           // We need to import verifyToken dynamically or move it to a shared lib that doesn't use 'server-only' if needed
           // But lib/auth.ts uses 'jsonwebtoken' which is fine in route handlers
           const { verifyToken } = await import("@/lib/auth");
-          const decoded = verifyToken(token);
+          const decoded = await verifyToken(token);
           if (decoded) {
             userId = decoded.userId;
           }

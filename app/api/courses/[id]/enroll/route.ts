@@ -36,38 +36,41 @@ export async function POST(
       return NextResponse.json(errorResponse("Already enrolled"), { status: 409 });
     }
 
-    // Create enrollment
-    const enrollment = await prisma.enrollment.create({
-      data: {
-        userId,
-        courseId,
-        status: "ACTIVE",
-        progress: 0,
-        lastAccessed: new Date(),
-      },
-      include: {
-        course: {
-          select: {
-            id: true,
-            title: true,
-            instructor: true,
-            category: true,
-            difficulty: true,
-            duration: true,
-            thumbnail: true,
-            price: true,
+    // Use transaction to ensure data consistency
+    const enrollment = await prisma.$transaction(async (tx) => {
+      // Create enrollment
+      const newEnrollment = await tx.enrollment.create({
+        data: {
+          userId,
+          courseId,
+          status: "ACTIVE",
+          progress: 0,
+          lastAccessed: new Date(),
+        },
+        include: {
+          course: {
+            select: {
+              id: true,
+              title: true,
+              instructor: true,
+              category: true,
+              difficulty: true,
+              duration: true,
+              thumbnail: true,
+              price: true,
+            },
           },
         },
-      },
-    });
+      });
 
-    // Increment course student count safely
-    try {
-      await prisma.course.update({ where: { id: courseId }, data: { studentsEnrolled: { increment: 1 } } });
-    } catch (e) {
-      // ignore if column doesn't exist
-      console.warn("Failed to increment studentsEnrolled", e);
-    }
+      // Increment student count
+      await tx.course.update({
+        where: { id: courseId },
+        data: { studentsEnrolled: { increment: 1 } },
+      });
+
+      return newEnrollment;
+    });
 
     return NextResponse.json(successResponse(enrollment, "Enrolled successfully"), { status: 201 });
   } catch (error) {

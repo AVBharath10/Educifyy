@@ -18,7 +18,7 @@ const PUBLIC_ROUTES = [
   "/api/upload", // Bypass middleware to avoid body locking issues with multipart/form-data
 ];
 
-export function middleware(request: NextRequest) {
+export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   console.log(" Middleware Hit:", pathname);
@@ -61,7 +61,7 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(new URL("/auth/login", request.url));
   }
 
-  const decoded = verifyToken(token);
+  const decoded = await verifyToken(token);
   console.log(" Token decoded:", decoded);
 
   if (!decoded) {
@@ -90,5 +90,4 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   matcher: ["/((?!_next/static|_next/image|favicon.ico|public|api/upload).*)"],
-  runtime: "nodejs",
 };

@@ -129,7 +129,7 @@ export default function LessonPage() {
                                 href={lesson.url}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors"
+                                className="px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
                             >
                                 Open Document
                             </a>
