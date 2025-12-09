@@ -69,11 +69,7 @@ export default function LoginPage() {
       <div className="w-full max-w-md">
         {/* Header */}
         <div className="text-center mb-8">
-          <div className="flex justify-center mb-4">
-            <div className="w-12 h-12 rounded-lg bg-linear-to-br from-primary to-accent flex items-center justify-center text-white font-bold text-lg">
-              E
-            </div>
-          </div>
+
           <h1 className="text-3xl font-bold text-foreground mb-2">Welcome Back</h1>
           <p className="text-muted-foreground">Login to your Educify account</p>
         </div>
