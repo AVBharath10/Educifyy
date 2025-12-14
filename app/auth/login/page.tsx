@@ -184,15 +184,7 @@ export default function LoginPage() {
           </div>
         </div>
 
-        {/* Demo Credentials */}
-        <div className="bg-muted/50 border border-border rounded-lg p-4 mb-4">
-          <p className="text-xs font-semibold text-foreground mb-2">Demo Credentials:</p>
-          <div className="text-xs text-muted-foreground space-y-1">
-            <p><span className="font-medium">Instructor:</span> instructor@educify.com / instructor123</p>
-            <p><span className="font-medium">Student 1:</span> student1@educify.com / student123</p>
-            <p><span className="font-medium">Student 2:</span> student2@educify.com / student456</p>
-          </div>
-        </div>
+
 
         {/* Footer Note */}
         <p className="text-center text-xs text-muted-foreground">
