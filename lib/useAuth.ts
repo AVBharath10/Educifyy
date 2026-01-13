@@ -48,7 +48,7 @@ export function useAuth() {
         const stored = localStorage.getItem("auth-state");
         if (stored) {
           const parsed = JSON.parse(stored);
-          
+
           // Only restore if both user and token exist
           if (parsed?.user && parsed?.token) {
             // Validate user still exists in database
@@ -58,7 +58,7 @@ export function useAuth() {
                 credentials: "include",
                 headers: { "Content-Type": "application/json" },
               }).then(r => r.ok);
-              
+
               if (userExists) {
                 // User is valid, restore state
                 setState({
@@ -88,7 +88,7 @@ export function useAuth() {
         console.error("Failed to restore auth state:", error);
         localStorage.removeItem("auth-state");
       }
-      
+
       // Mark as initialized so components know auth check is complete
       setIsInitialized(true);
     };
@@ -114,6 +114,7 @@ export function useAuth() {
       password: string;
       confirmPassword: string;
       fullName: string;
+      role?: "STUDENT" | "INSTRUCTOR";
     }) => {
       setState((prev) => ({ ...prev, isLoading: true, error: null }));
       try {

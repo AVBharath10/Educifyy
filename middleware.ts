@@ -7,6 +7,12 @@ const PUBLIC_ROUTES = [
   "/auth/signup",
   "/auth/google",
   "/auth/google/callback",
+  "/catalog",
+  "/teach",
+  "/enterprise",
+  "/pricing",
+  "/course",
+  "/", // Landing page
 
   "/api/auth/login",
   "/api/auth/signup",
@@ -23,9 +29,12 @@ export async function middleware(request: NextRequest) {
 
   console.log(" Middleware Hit:", pathname);
 
-  const isPublicRoute = PUBLIC_ROUTES.some((route) =>
-    pathname.startsWith(route)
-  );
+  const isPublicRoute = PUBLIC_ROUTES.some((route) => {
+    if (route === "/") {
+      return pathname === "/";
+    }
+    return pathname.startsWith(route);
+  });
 
   // Allow explicitly public routes first
   if (isPublicRoute) {

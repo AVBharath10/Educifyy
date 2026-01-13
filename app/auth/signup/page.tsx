@@ -8,11 +8,14 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { Loader2, Eye, EyeOff } from "lucide-react";
+import { Loader2, Eye, EyeOff, GraduationCap, School } from "lucide-react";
 
 export default function SignupPage() {
   const router = useRouter();
   const { signup, isLoading, error, clearError } = useAuth();
+
+  // Default to STUDENT
+  const [role, setRole] = useState<"STUDENT" | "INSTRUCTOR">("STUDENT");
 
   const [formData, setFormData] = useState({
     fullName: "",
@@ -62,8 +65,9 @@ export default function SignupPage() {
     if (!validateForm()) return;
 
     try {
-      await signup(formData);
-      // Signup successful - redirect to dashboard
+      // Pass role along with other data
+      await signup({ ...formData, role });
+      // Signup successful - redirect to dashboard (or teacher dashboard if relevant)
       router.push("/dashboard");
     } catch (err) {
       // Error is already set in the auth state
@@ -72,21 +76,60 @@ export default function SignupPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5 flex items-center justify-center p-4">
-      <div className="w-full max-w-md">
+    <div className="min-h-screen bg-[#FDFBF7] bg-pattern flex items-center justify-center p-4">
+      <div className="w-full max-w-md pt-10 pb-20"> {/* Added padding to account for fixed header if needed */}
         {/* Header */}
         <div className="text-center mb-8">
-
-          <h1 className="text-3xl font-bold text-foreground mb-2">Join Educify</h1>
-          <p className="text-muted-foreground">Create your account to start learning</p>
+          <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-[#1A1916] text-[#FDFBF7] mb-6 shadow-lg shadow-black/10">
+            <span className="text-xl font-bold">E</span>
+          </div>
+          <h1 className="text-3xl font-medium tracking-tight text-[#1A1916] mb-2">Join Educify</h1>
+          <p className="text-neutral-500">Create your account to start your journey</p>
         </div>
 
         {/* Form Card */}
-        <div className="bg-card border border-border rounded-lg shadow-lg p-6 mb-6">
+        <div className="bg-white border border-[#EBE8DF] rounded-xl shadow-sm p-8 mb-6">
+
+          {/* Role Selection */}
+          <div className="grid grid-cols-2 gap-4 mb-8">
+            <div
+              className={`cursor-pointer border-2 rounded-lg p-4 flex flex-col items-center justify-center gap-2 transition-all ${role === 'STUDENT' ? 'border-black bg-neutral-50' : 'border-transparent bg-neutral-100 hover:bg-neutral-200 opacity-60'}`}
+              onClick={() => setRole("STUDENT")}
+            >
+              <div className={`p-2 rounded-full ${role === 'STUDENT' ? 'bg-black text-white' : 'bg-neutral-200 text-neutral-500'}`}>
+                <GraduationCap size={20} />
+              </div>
+              <span className={`font-medium text-sm ${role === 'STUDENT' ? 'text-black' : 'text-neutral-500'}`}>I want to Learn</span>
+            </div>
+
+            <div
+              className={`cursor-pointer border-2 rounded-lg p-4 flex flex-col items-center justify-center gap-2 transition-all ${role === 'INSTRUCTOR' ? 'border-black bg-neutral-50' : 'border-transparent bg-neutral-100 hover:bg-neutral-200 opacity-60'}`}
+              onClick={() => setRole("INSTRUCTOR")}
+            >
+              <div className={`p-2 rounded-full ${role === 'INSTRUCTOR' ? 'bg-black text-white' : 'bg-neutral-200 text-neutral-500'}`}>
+                <School size={20} />
+              </div>
+              <span className={`font-medium text-sm ${role === 'INSTRUCTOR' ? 'text-black' : 'text-neutral-500'}`}>I want to Teach</span>
+            </div>
+          </div>
+
           {/* Error Messages */}
           {(error || validationError) && (
-            <Alert variant="destructive" className="mb-4">
-              <AlertDescription>{error || validationError}</AlertDescription>
+            <Alert variant={error?.toLowerCase().includes('already') ? 'default' : 'destructive'} className={`mb-4 ${error?.toLowerCase().includes('already') ? 'bg-amber-50 border-amber-200 text-amber-900' : ''}`}>
+              {error?.toLowerCase().includes('already') ? (
+                <div className="flex flex-col gap-1">
+                  <span className="font-medium">Account already exists</span>
+                  <div className="text-sm">
+                    It looks like an account with this email already exists.
+                    <Link href="/auth/login" className="font-bold underline ml-1 hover:text-black">
+                      Log in here
+                    </Link>
+                    {' '}to access your dashboard.
+                  </div>
+                </div>
+              ) : (
+                <AlertDescription>{error || validationError}</AlertDescription>
+              )}
             </Alert>
           )}
 
@@ -183,7 +226,7 @@ export default function SignupPage() {
             <Button
               type="submit"
               disabled={isLoading}
-              className="w-full h-10 mt-6"
+              className="w-full h-11 mt-6 bg-[#1A1916] hover:bg-[#1A1916]/90 text-[#FDFBF7] font-medium rounded-lg transition-all"
             >
               {isLoading ? (
                 <>
@@ -191,7 +234,7 @@ export default function SignupPage() {
                   Creating Account...
                 </>
               ) : (
-                "Create Account"
+                `Create ${role === 'STUDENT' ? 'Student' : 'Instructor'} Account`
               )}
             </Button>
           </form>

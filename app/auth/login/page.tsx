@@ -65,17 +65,19 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-[#FDFBF7] bg-pattern flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         {/* Header */}
         <div className="text-center mb-8">
-
-          <h1 className="text-3xl font-bold text-foreground mb-2">Welcome Back</h1>
-          <p className="text-muted-foreground">Login to your Educify account</p>
+          <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-[#1A1916] text-[#FDFBF7] mb-6 shadow-lg shadow-black/10">
+            <span className="text-xl font-bold">E</span>
+          </div>
+          <h1 className="text-3xl font-medium tracking-tight text-[#1A1916] mb-2">Welcome back</h1>
+          <p className="text-neutral-500">Enter your details to access your account.</p>
         </div>
 
         {/* Form Card */}
-        <div className="bg-card border border-border rounded-lg shadow-lg p-6 mb-6">
+        <div className="bg-white border border-[#EBE8DF] rounded-xl shadow-sm p-8 mb-6">
           {/* Error Messages */}
           {(error || validationError) && (
             <Alert variant="destructive" className="mb-4">
@@ -159,7 +161,7 @@ export default function LoginPage() {
             <Button
               type="submit"
               disabled={isLoading}
-              className="w-full h-10 mt-6"
+              className="w-full h-11 mt-6 bg-[#1A1916] hover:bg-[#1A1916]/90 text-[#FDFBF7] font-medium rounded-lg transition-all"
             >
               {isLoading ? (
                 <>
@@ -167,7 +169,7 @@ export default function LoginPage() {
                   Logging in...
                 </>
               ) : (
-                "Login"
+                "Sign In"
               )}
             </Button>
           </form>
