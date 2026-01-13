@@ -24,27 +24,27 @@ interface CourseSidebarProps {
 
 export function CourseSidebar({ course, currentLessonId }: CourseSidebarProps) {
     return (
-        <div className="flex flex-col h-full border-r border-border bg-card/50">
+        <div className="flex flex-col h-full border-r border-[#EBE8DF] bg-[#FDFBF7]">
             {/* Header */}
-            <div className="p-4 border-b border-border">
+            <div className="p-5 border-b border-[#EBE8DF]">
                 <Link
                     href="/dashboard"
-                    className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary mb-4 transition-colors"
+                    className="flex items-center gap-2 text-xs font-medium text-neutral-500 hover:text-black mb-4 transition-colors uppercase tracking-wide"
                 >
-                    <ChevronLeft size={16} />
+                    <ChevronLeft size={14} />
                     Back to Dashboard
                 </Link>
-                <h2 className="font-bold line-clamp-2 mb-2">{course.title}</h2>
+                <h2 className="font-medium text-lg text-[#1A1916] line-clamp-2 mb-4 leading-tight">{course.title}</h2>
 
                 {/* Progress Bar */}
                 <div className="space-y-2">
-                    <div className="flex items-center justify-between text-xs text-muted-foreground">
+                    <div className="flex items-center justify-between text-xs text-neutral-500 font-medium">
                         <span>{course.progress || 0}% Complete</span>
                         <span>{course.modules.filter(m => m.isCompleted).length}/{course.modules.length}</span>
                     </div>
-                    <div className="h-1.5 bg-secondary/20 rounded-full overflow-hidden">
+                    <div className="h-1.5 bg-[#EBE8DF] rounded-full overflow-hidden">
                         <div
-                            className="h-full bg-primary transition-all duration-500"
+                            className="h-full bg-[#1A1916] transition-all duration-500"
                             style={{ width: `${course.progress || 0}%` }}
                         />
                     </div>
@@ -52,7 +52,7 @@ export function CourseSidebar({ course, currentLessonId }: CourseSidebarProps) {
             </div>
 
             {/* Modules List */}
-            <div className="flex-1 overflow-y-auto p-4 space-y-2">
+            <div className="flex-1 overflow-y-auto p-3 space-y-1">
                 {course.modules.map((module, index) => {
                     const isActive = module.id === currentLessonId
                     const Icon = module.type.toLowerCase().includes('video') ? Play : FileText
@@ -64,19 +64,19 @@ export function CourseSidebar({ course, currentLessonId }: CourseSidebarProps) {
                             className={cn(
                                 "flex items-start gap-3 p-3 rounded-lg transition-all border",
                                 isActive
-                                    ? "bg-primary/10 border-primary/20"
-                                    : "hover:bg-accent/10 border-transparent hover:border-border"
+                                    ? "bg-white border-[#EBE8DF] shadow-sm"
+                                    : "hover:bg-white hover:border-[#EBE8DF] border-transparent hover:shadow-sm"
                             )}
                         >
                             <div className="mt-0.5">
                                 {module.isCompleted ? (
-                                    <CheckCircle size={16} className="text-green-500" />
+                                    <CheckCircle size={16} className="text-emerald-600" />
                                 ) : (
                                     <div className={cn(
-                                        "w-4 h-4 rounded-full border-2 flex items-center justify-center",
-                                        isActive ? "border-primary" : "border-muted-foreground"
+                                        "w-4 h-4 rounded-full border flex items-center justify-center transition-colors",
+                                        isActive ? "border-black" : "border-neutral-300"
                                     )}>
-                                        {isActive && <div className="w-1.5 h-1.5 rounded-full bg-primary" />}
+                                        {isActive && <div className="w-1.5 h-1.5 rounded-full bg-black" />}
                                     </div>
                                 )}
                             </div>
@@ -84,11 +84,11 @@ export function CourseSidebar({ course, currentLessonId }: CourseSidebarProps) {
                             <div className="flex-1 min-w-0">
                                 <p className={cn(
                                     "text-sm font-medium line-clamp-2 mb-1",
-                                    isActive ? "text-primary" : "text-foreground"
+                                    isActive ? "text-black" : "text-neutral-600"
                                 )}>
                                     {index + 1}. {module.title}
                                 </p>
-                                <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                                <div className="flex items-center gap-2 text-xs text-neutral-400">
                                     <Icon size={12} />
                                     <span>{module.duration || '5 min'}</span>
                                 </div>

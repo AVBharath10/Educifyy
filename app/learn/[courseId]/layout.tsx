@@ -53,9 +53,9 @@ export default function LearnLayout({
     }
 
     return (
-        <div className="flex h-screen bg-background overflow-hidden">
+        <div className="flex h-screen bg-white overflow-hidden">
             {/* Desktop Sidebar */}
-            <div className="hidden md:block w-80 h-full shrink-0">
+            <div className="hidden md:block w-80 h-full shrink-0 bg-[#FDFBF7]">
                 <CourseSidebar course={course} currentLessonId={lessonId} />
             </div>
 
