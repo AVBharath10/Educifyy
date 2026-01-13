@@ -11,9 +11,9 @@ interface PageLayoutProps {
 
 export function PageLayout({ children, showTopBar = true }: PageLayoutProps) {
   return (
-    <div className="flex h-screen">
+    <div className="flex h-screen bg-[#FDFBF7]">
       <SidebarNav />
-      <div className="flex-1 flex flex-col md:ml-64 overflow-hidden">
+      <div className="flex-1 flex flex-col md:ml-64 overflow-hidden bg-[#FDFBF7]">
         {showTopBar && <TopBar />}
         <main className="flex-1 overflow-auto">
           {children}
