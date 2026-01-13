@@ -1,13 +1,17 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { JetBrains_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const inter = Inter({ subsets: ["latin"] });
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  variable: '--font-mono',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
-  title: 'Educify - Learn & Teach',
-  description: 'Modern educational platform for learning and sharing courses',
+  title: 'Educify - The Open Knowledge Platform',
+  description: 'The open platform for limitless learning. Host premium courses, stream live workshops, and certify the next generation of engineers.',
   icons: {
     icon: '/icon.png?v=3',
     shortcut: '/icon.png?v=3',
@@ -21,8 +25,13 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="dark">
-      <body className={`${inter.className} antialiased bg-background text-foreground`}>
+    <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet" />
+      </head>
+      <body className={`font-sans ${jetbrainsMono.variable} antialiased bg-[#FDFBF7] text-[#1A1916] bg-pattern min-h-screen flex flex-col`}>
         {children}
         <Analytics />
       </body>
