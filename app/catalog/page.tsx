@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from 'react'
 import { Search, Filter, ChevronDown, Loader2 } from 'lucide-react'
-import { PageLayout } from '@/components/page-layout'
+import { SiteHeader } from '@/components/landing/site-header'
+import { SiteFooter } from '@/components/landing/site-footer'
 import { CourseCard } from '@/components/course-card'
 import { courseApi } from '@/lib/api'
 
@@ -16,7 +17,6 @@ export default function CatalogPage() {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('All')
   const [selectedDifficulty, setSelectedDifficulty] = useState('All')
-  const [isFilterOpen, setIsFilterOpen] = useState(false)
 
   // Fetch courses on mount
   useEffect(() => {
@@ -25,9 +25,9 @@ export default function CatalogPage() {
         setIsLoading(true)
         setError(null)
         const response = await courseApi.getCourses({ authenticated: false } as any)
-        // Extract courses array from paginated response
-        const coursesArray = response?.data || []
-        setAllCourses(Array.isArray(coursesArray) ? coursesArray : [])
+        // Check if response is array or has data property
+        const coursesArray = Array.isArray(response) ? response : (response as any)?.data || []
+        setAllCourses(coursesArray)
       } catch (err: any) {
         console.error('Failed to fetch courses:', err)
         setError(err.message || 'Failed to load courses')
@@ -50,40 +50,48 @@ export default function CatalogPage() {
   })
 
   return (
-    <PageLayout>
-      <div className="min-h-screen bg-background p-4 md:p-8">
-        {/* Header & Search */}
-        <div className="max-w-7xl mx-auto mb-8">
-          <h1 className="text-3xl md:text-4xl font-bold mb-6">Explore Courses</h1>
+    <div className="min-h-screen bg-[#FDFBF7] flex flex-col font-sans">
+      <SiteHeader />
+      <main className="flex-1 w-full">
+        <div className="p-6 md:p-12 max-w-7xl mx-auto">
+          {/* Header */}
+          {/* Hero Header */}
+          <div className="text-center max-w-3xl mx-auto mb-16 pt-8">
+            <h1 className="text-4xl md:text-5xl font-semibold tracking-tighter mb-4 text-[#1A1916]">
+              Explore Catalog
+            </h1>
+            <p className="text-lg text-neutral-500 mb-8 leading-relaxed">
+              Discover courses taught by industry experts. Master new skills in design,
+              development, business, and more.
+            </p>
 
-          <div className="relative max-w-2xl">
-            <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground" size={20} />
-            <input
-              type="text"
-              placeholder="Search for courses, instructors, or topics..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-12 pr-4 py-3 rounded-xl border border-border bg-card focus:outline-none focus:ring-2 focus:ring-primary transition-all shadow-sm"
-            />
+            <div className="relative max-w-xl mx-auto group">
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-neutral-400 group-focus-within:text-black transition-colors" />
+              <input
+                type="text"
+                placeholder="Search for courses, skills, or instructors..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-12 pr-4 py-3.5 bg-white border border-[#EBE8DF] rounded-xl text-base shadow-sm focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all placeholder:text-neutral-400 hover:border-neutral-300"
+              />
+            </div>
           </div>
-        </div>
 
-        <div className="max-w-7xl mx-auto flex flex-col gap-8">
-          {/* Filters Section */}
-          <div className="flex flex-col md:flex-row gap-4 items-center justify-between sticky top-0 z-10 bg-background/95 backdrop-blur-xl py-4 border-b border-border/50">
-            {/* Categories (Horizontal Scroll) */}
-            <div className="w-full md:w-auto flex-1 overflow-x-auto pb-2 md:pb-0 no-scrollbar">
-              <div className="flex items-center gap-2">
+          {/* Filters */}
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6 mb-10 pb-6 border-b border-[#EBE8DF]">
+            {/* Categories */}
+            <div className="w-full md:w-auto overflow-x-auto no-scrollbar mask-gradient-right">
+              <div className="flex items-center gap-2 pr-4">
                 {categories.map((cat) => (
                   <button
                     key={cat}
                     onClick={() => setSelectedCategory(cat)}
-                    className={`whitespace-nowrap px-4 py-2 rounded-full text-sm font-medium transition-all border ${selectedCategory === cat
-                        ? 'bg-primary text-primary-foreground border-primary shadow-lg shadow-primary/20'
-                        : 'bg-card hover:bg-muted border-border text-muted-foreground hover:text-foreground'
+                    className={`whitespace-nowrap px-5 py-2 rounded-lg text-sm font-medium transition-all duration-200 border ${selectedCategory === cat
+                      ? 'bg-[#1A1916] text-[#FDFBF7] border-[#1A1916] shadow-md transform scale-105'
+                      : 'bg-white text-neutral-500 border-[#EBE8DF] hover:border-neutral-300 hover:text-black hover:bg-neutral-50'
                       }`}
                   >
-                    {cat === 'All' ? 'All' : cat.replace(/_/g, ' ')}
+                    {cat === 'All' ? 'All Courses' : cat.replace(/_/g, ' ')}
                   </button>
                 ))}
               </div>
@@ -92,106 +100,98 @@ export default function CatalogPage() {
             {/* Difficulty Dropdown */}
             <div className="relative group shrink-0">
               <button
-                className="flex items-center gap-2 px-4 py-2 rounded-full bg-card border border-border hover:border-primary/50 transition-colors text-sm font-medium"
+                className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white border border-[#EBE8DF] hover:border-neutral-300 transition-all text-sm font-medium hover:shadow-sm"
               >
-                <Filter size={16} className="text-muted-foreground" />
-                <span>{selectedDifficulty === 'All' ? 'Any Difficulty' : selectedDifficulty}</span>
-                <ChevronDown size={14} className="text-muted-foreground" />
+                <Filter size={16} className="text-neutral-400" />
+                <span>{selectedDifficulty === 'All' ? 'Filter by Level' : selectedDifficulty}</span>
+                <ChevronDown size={14} className="text-neutral-400" />
               </button>
 
-              {/* Dropdown Menu (Simple Hover/Focus implementation) */}
-              <div className="absolute right-0 top-full mt-2 w-48 bg-card border border-border rounded-xl shadow-xl overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
-                {difficulties.map((diff) => (
-                  <button
-                    key={diff}
-                    onClick={() => setSelectedDifficulty(diff)}
-                    className={`w-full text-left px-4 py-2.5 text-sm hover:bg-muted transition-colors ${selectedDifficulty === diff ? 'text-primary font-medium bg-primary/5' : 'text-muted-foreground'
-                      }`}
-                  >
-                    {diff === 'All' ? 'Any Difficulty' : diff}
-                  </button>
-                ))}
+              <div className="absolute right-0 top-full mt-2 w-48 bg-white border border-[#EBE8DF] rounded-xl shadow-xl overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 transform origin-top-right scale-95 group-hover:scale-100">
+                <div className="p-1">
+                  {difficulties.map((diff) => (
+                    <button
+                      key={diff}
+                      onClick={() => setSelectedDifficulty(diff)}
+                      className={`w-full text-left px-4 py-2.5 text-sm rounded-lg transition-colors ${selectedDifficulty === diff
+                        ? 'bg-neutral-100 text-black font-medium'
+                        : 'text-neutral-500 hover:bg-neutral-50 hover:text-black'
+                        }`}
+                    >
+                      {diff === 'All' ? 'All Levels' : diff}
+                    </button>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
 
-          {/* Main Content */}
-          <div className="flex-1">
-            {/* Results Count */}
-            <div className="mb-6 pb-4 border-b border-border flex items-center justify-between">
-              <h2 className="text-xl font-semibold">
-                {selectedCategory === 'All' ? 'All Courses' : selectedCategory.replace(/_/g, ' ')}
-              </h2>
-              <p className="text-sm text-muted-foreground">
-                <span className="font-semibold text-foreground">{filteredCourses.length}</span> results
-              </p>
-            </div>
-
-            {/* Loading State */}
+          {/* Content */}
+          <div className="min-h-[400px]">
+            {/* Loading */}
             {isLoading && (
               <div className="flex items-center justify-center py-20">
-                <Loader2 className="w-10 h-10 animate-spin text-primary" />
+                <Loader2 className="w-8 h-8 animate-spin text-neutral-400" />
               </div>
             )}
 
-            {/* Error State */}
+            {/* Error */}
             {error && (
-              <div className="text-center py-20">
-                <p className="text-lg text-destructive mb-2">Failed to load courses</p>
-                <p className="text-sm text-muted-foreground">{error}</p>
+              <div className="text-center py-20 bg-red-50/50 rounded-xl border border-red-100">
+                <p className="text-sm text-red-600 mb-1">Unable to load courses</p>
+                <p className="text-xs text-red-500 opacity-80">{error}</p>
               </div>
             )}
 
-            {/* Courses Grid */}
+            {/* Grid */}
             {!isLoading && !error && filteredCourses.length > 0 && (
-              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-                {filteredCourses.map((course) => (
-                  <CourseCard
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                {filteredCourses.map((course, index) => (
+                  <div
                     key={course.id}
-                    id={course.id}
-                    title={course.title}
-                    instructor={course.instructor?.name || 'Unknown'}
-                    category={course.category}
-                    difficulty={course.difficulty}
-                    rating={course.rating}
-                    students={course.studentsEnrolled}
-                    duration={course.duration}
-                    thumbnail={course.thumbnail}
-                  />
+                    className="animate-in fade-in slide-in-from-bottom-4 duration-700 fill-mode-both"
+                    style={{ animationDelay: `${index * 100}ms` }}
+                  >
+                    <CourseCard
+                      id={course.id}
+                      title={course.title}
+                      instructor={course.instructor?.name || 'Unknown'}
+                      category={course.category}
+                      difficulty={course.difficulty}
+                      rating={course.rating}
+                      students={course.studentsEnrolled}
+                      duration={course.duration}
+                      thumbnail={course.thumbnail}
+                    />
+                  </div>
                 ))}
               </div>
             )}
 
-            {/* No Results State */}
-            {!isLoading && !error && filteredCourses.length === 0 && allCourses.length > 0 && (
-              <div className="text-center py-20 bg-card/50 rounded-xl border border-border border-dashed">
-                <div className="w-16 h-16 bg-muted rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Search className="text-muted-foreground" size={32} />
+            {/* Empty States */}
+            {!isLoading && !error && filteredCourses.length === 0 && (
+              <div className="text-center py-20 bg-white rounded-xl border border-dashed border-[#EBE8DF]">
+                <div className="w-12 h-12 bg-neutral-50 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Search className="w-6 h-6 text-neutral-400" />
                 </div>
-                <p className="text-xl font-semibold mb-2">No courses found</p>
-                <p className="text-muted-foreground">Try adjusting your search or filters to find what you're looking for.</p>
+                <h3 className="text-lg font-medium mb-1">No courses found</h3>
+                <p className="text-neutral-500 text-sm mb-4">Adjust your filters to see more results</p>
                 <button
                   onClick={() => {
                     setSearchQuery('')
                     setSelectedCategory('All')
                     setSelectedDifficulty('All')
                   }}
-                  className="mt-4 text-primary hover:underline"
+                  className="text-xs font-medium text-black underline hover:text-neutral-600"
                 >
                   Clear all filters
                 </button>
               </div>
             )}
-
-            {/* Empty State */}
-            {!isLoading && !error && allCourses.length === 0 && (
-              <div className="text-center py-20">
-                <p className="text-xl font-semibold text-muted-foreground">No courses available yet</p>
-              </div>
-            )}
           </div>
         </div>
-      </div>
-    </PageLayout>
+      </main>
+      <SiteFooter />
+    </div>
   )
 }

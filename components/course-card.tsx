@@ -22,16 +22,18 @@ export function CourseCard({
   instructor,
   category,
   difficulty,
+  rating,
+  students,
   duration,
   thumbnail,
   onDelete,
   onEdit,
 }: CourseCardProps & { onDelete?: (id: string) => void; onEdit?: (id: string) => void }) {
   return (
-    <div className="group relative h-full rounded-2xl border border-border/50 bg-card overflow-hidden hover:shadow-2xl hover:shadow-primary/5 hover:-translate-y-1 transition-all duration-300 flex flex-col">
+    <div className="group relative h-full rounded-2xl border border-[#EBE8DF] bg-white overflow-hidden hover:shadow-xl hover:shadow-black/5 hover:-translate-y-1 transition-all duration-300 flex flex-col">
       <Link href={`/course/${id}`} className="flex-1 flex flex-col">
         {/* Thumbnail */}
-        <div className="relative aspect-[16/9] w-full bg-muted overflow-hidden">
+        <div className="relative aspect-[16/9] w-full bg-neutral-100 overflow-hidden">
           {thumbnail ? (
             <img
               src={thumbnail}
@@ -39,37 +41,40 @@ export function CourseCard({
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
             />
           ) : (
-            <div className="w-full h-full flex items-center justify-center bg-linear-to-br from-secondary/20 to-primary/10">
-              <div className="text-5xl opacity-20 grayscale">🎓</div>
+            <div className="w-full h-full flex items-center justify-center bg-[#FDFBF7]">
+              <div className="text-4xl opacity-20 grayscale">🎓</div>
             </div>
           )}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
 
           {/* Category Badge */}
           <div className="absolute top-3 left-3">
-            <span className="px-3 py-1 rounded-full bg-white/10 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-wider border border-white/20 shadow-lg">
+            <span className="px-2.5 py-1 rounded-md bg-white/90 backdrop-blur-md text-black text-[10px] font-bold uppercase tracking-wider border border-white/20 shadow-sm">
               {category.replace(/_/g, ' ')}
             </span>
           </div>
         </div>
 
         {/* Content */}
-        <div className="p-5 flex flex-col flex-1 gap-4">
-          <h3 className="font-bold text-lg leading-snug group-hover:text-primary transition-colors line-clamp-2">
+        <div className="p-5 flex flex-col flex-1 gap-3">
+          <h3 className="font-medium text-lg leading-snug group-hover:text-black transition-colors line-clamp-2 text-[#1A1916]">
             {title}
           </h3>
 
-          <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            <div className="w-6 h-6 rounded-full bg-secondary/20 flex items-center justify-center text-xs font-bold text-secondary-foreground">
+          <div className="flex items-center gap-2 text-sm text-neutral-500">
+            <div className="w-6 h-6 rounded-full bg-neutral-100 flex items-center justify-center text-xs font-bold text-black border border-[#EBE8DF]">
               {(instructor && instructor !== 'Unknown' ? instructor[0] : 'E')}
             </div>
-            <span className="font-medium">{instructor === 'Unknown' ? 'Educify Instructor' : instructor}</span>
+            <span className="font-medium text-xs">{instructor === 'Unknown' ? 'Educify Instructor' : instructor}</span>
           </div>
 
-          <div className="mt-auto pt-4 border-t border-border/50 flex items-center justify-between text-xs font-medium text-muted-foreground">
+          <div className="mt-auto pt-4 border-t border-[#EBE8DF] flex items-center justify-between text-xs font-medium text-neutral-400">
             <div className="flex items-center gap-1.5">
-              <Clock size={14} className="text-primary/70" />
+              <Clock size={14} className="" />
               <span>{duration}</span>
+            </div>
+            <div className="flex items-center gap-1">
+              <Users size={14} />
+              <span>{students} students</span>
             </div>
           </div>
         </div>
